@@ -3,11 +3,16 @@ import org.scalatest._
 
 class DJTrendSpec extends FlatSpec with Matchers {
 
-  "TrendUtils" should "return null when supplied list is null" in {
-    DJTrend.findTrend(null) should be (Nil)
+  "TrendUtils" should "return zero when supplied list is Nil" in {
+    DJTrend.findTrend(Nil) should be(0.0)
   }
 
-  "TrendUtils" should "return null when supplied list is empty" in {
-    DJTrend.findTrend(List[Int]()) should be (Nil)
+  "TrendUtils" should "return zero when supplied list is empty" in {
+    DJTrend.findTrend(List[Double]()) should be(0.0)
   }
+
+  "TrendUtils" should "return zero when supplied list only contain a single value" in {
+    DJTrend.findTrend(List(1.0)) should be(0.0)
+  }
+
 }
