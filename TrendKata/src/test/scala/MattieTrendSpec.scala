@@ -15,9 +15,19 @@ class MattieTrendSpec extends FlatSpec with Matchers {
     MattieTrend.calculateTrend(list) should be(Some(0.0))
   }
 
+  "MattieTrend" should "return trend value when list contains whole numbers and decimals" in {
+    val list: List[Double] = List(2.0, 4, 8.0)
+    MattieTrend.calculateTrend(list) should be(Some(2.0))
+  }
+
   "MattieTrend" should "return trend value if list has more than one element" in {
     val list: List[Double] = List(3.0, 6.0, 12.0)
     MattieTrend.calculateTrend(list) should be(Some(2.0))
+  }
+
+  "MattieTrend" should "return trend value, we're checking all of the rules." in {
+    val list: List[Double] = List(0.0, 3.0, 6.0, 6, 12)
+    MattieTrend.calculateTrend(list) should be(Some(3.0))
   }
   
   "MattieTrend.calculatePairs" should "return 1.0 when p1 == 0.0 and p2 > 0.0" in {
