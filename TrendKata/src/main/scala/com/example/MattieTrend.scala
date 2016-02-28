@@ -2,7 +2,21 @@ package com.example
 
 object MattieTrend {
   def calculateTrend(list: List[Double]) : Option[Double] = {
-    if (list.isEmpty) None else if (list.length == 1) Some(0.0) else Some(10.0)
+    
+    var result: Double = 0.0
+    
+    if (list.isEmpty) {
+      return None
+    } else if (list.length == 1) {
+      return Some(0.0)
+    } else {
+      val slidPairs: List[List[Double]] = list.sliding(2).toList
+      slidPairs.foreach{(pair: List[Double]) => 
+        val pairValue: Double = calculatePairs(pair(0), pair(1))
+        result = result + pairValue
+      }
+      return Some(result)
+    }
   }
   
   def calculatePairs(p1: Double, p2: Double) : Double = {
