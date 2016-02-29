@@ -8,11 +8,7 @@ object DJTrend {
 
     if (list.head == 0.0 && list.last > 0.0) return 1.0
 
-    return 0.0
+    return (list.last - list.head)/list.head
+
   }
-
-  //  def main(args: Array[String]): Unit = {
-  //    println("Hello, world!")
-  //  }
-
 }
