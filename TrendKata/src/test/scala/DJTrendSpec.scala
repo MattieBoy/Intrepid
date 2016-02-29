@@ -15,4 +15,8 @@ class DJTrendSpec extends FlatSpec with Matchers {
     DJTrend.findTrend(List(1.0)) should be(0.0)
   }
 
+  "TrendUtils" should "return 1.0 when P1 equals zero and p2 greater than zero" in {
+    DJTrend.findTrend(List(0.0, 1.0)) should be (1.0)
+  }
+
 }
