@@ -3,7 +3,7 @@ package com.example
 object DJTrendFunction {
 
   def calculatePairValue(left: Double, right: Double): Double = {
-    if (left == 0.0 && right == 0.0) return 0.0
+    if (left == right) return 0.0
     if (left == 0.0 && right > 0.0) return 1.0
     (right - left) / left
   }
