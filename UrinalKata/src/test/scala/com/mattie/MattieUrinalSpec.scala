@@ -1,3 +1,5 @@
+package com.mattie
+
 import org.scalatest._
 
 class MattieUrinalSpec extends FlatSpec with Matchers {
