@@ -1,4 +1,9 @@
+<<<<<<< HEAD:UrinalKata/src/test/scala/MattieUrinalSpec.scala
 import com.example.MattieUrinal
+=======
+package com.mattie
+
+>>>>>>> 53df266b0e5402c9557adbf76051f4384e1c53dc:UrinalKata/src/test/scala/com/mattie/MattieUrinalSpec.scala
 import org.scalatest._
 
 class MattieUrinalSpec extends FlatSpec with Matchers {

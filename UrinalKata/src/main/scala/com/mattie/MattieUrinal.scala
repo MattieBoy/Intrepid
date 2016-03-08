@@ -1,4 +1,4 @@
-package com.example
+package com.mattie
 
 object MattieUrinal {
 
