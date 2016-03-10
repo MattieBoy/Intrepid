@@ -23,5 +23,6 @@
         </option>
       </SbtProjectSettings>
     </option>
+    <option name="vmParameters" value="" />
   </component>
 </project>
