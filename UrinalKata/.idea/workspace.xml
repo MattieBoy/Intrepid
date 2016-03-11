@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ad37b6d-8048-4f56-9fa8-2d755fc41812" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/dj/UrinalSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/dj/UrinalSpec.scala" />
     </list>
@@ -33,14 +32,14 @@
     <favorites_list name="UrinalKata" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.36653388">
+    <splitter split-orientation="horizontal" split-proportion="0.49129352">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Urinal.scala" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.075093865">
-                  <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+                <state vertical-scroll-proportion="0.46933666">
+                  <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -50,11 +49,31 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="UrinalSpec.scala" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Urinal.scala" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.17396747">
+                  <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="UrinalSpec.scala" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/scala/com/dj/UrinalSpec.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.63829786">
-                  <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="UrinalStatus.scala" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/UrinalStatus.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -90,8 +109,8 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/dj/UrinalStatus.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/UrinalStatusSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/Urinal.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/UrinalSpec.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" />
       </list>
     </option>
   </component>
@@ -313,8 +332,8 @@
       <recent name="com.dj" />
     </key>
   </component>
-  <component name="RunManager" selected="ScalaTest.UrinalSpec.Urinal should return score of 0 when occupied">
-    <configuration default="false" name="UrinalSpec.Urinal should have a left neighbor when set" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+  <component name="RunManager" selected="ScalaTest.UrinalSpec.Urinal should default to Available status when created&#10;Urinal should return properly assigned position when requested&#10;Urinal should be unavailable when status is occupied&#10;Urinal should not have a left neighbor by default&#10;Urinal should not have a right neighbor by default&#10;Urinal should have left neighbor when created&#10;Urinal should have right neighbor when created&#10;Urinal should be considered occupied when an available urinal, with an occupied left and right neighbor exists&#10;Urinal should be considered available when an available urinal, in first position, with an non-existent left neighbor and occupied right neighbor&#10;Urinal should be considered available when an available urinal, in last position, with an occupied left neighbor and non-existent right neighbor">
+    <configuration default="false" name="UrinalSpec.Urinal should have left neighbor when created" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="urinalkata" />
       <setting name="path" value="com.dj.UrinalSpec" />
@@ -323,13 +342,13 @@
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Urinal should have a left neighbor when set" />
+      <setting name="testName" value="Urinal should have left neighbor when created" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="UrinalSpec.Urinal should not have an empty right neighbor by default" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+    <configuration default="false" name="UrinalSpec.Urinal should default to Available status when created&#10;Urinal should return properly assigned position when requested&#10;Urinal should be unavailable when status is occupied&#10;Urinal should not have a left neighbor by default&#10;Urinal should not have a right neighbor by default&#10;Urinal should have left neighbor when created&#10;Urinal should have right neighbor when created" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="urinalkata" />
       <setting name="path" value="com.dj.UrinalSpec" />
@@ -338,13 +357,13 @@
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Urinal should not have an empty right neighbor by default" />
+      <setting name="testName" value="Urinal should default to Available status when created&#10;Urinal should return properly assigned position when requested&#10;Urinal should be unavailable when status is occupied&#10;Urinal should not have a left neighbor by default&#10;Urinal should not have a right neighbor by default&#10;Urinal should have left neighbor when created&#10;Urinal should have right neighbor when created" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="UrinalSpec.Urinal should have a right neighbor when set" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+    <configuration default="false" name="UrinalSpec.Urinal should default to Available status when created&#10;Urinal should return properly assigned position when requested&#10;Urinal should be unavailable when status is occupied&#10;Urinal should not have a left neighbor by default&#10;Urinal should not have a right neighbor by default&#10;Urinal should have left neighbor when created&#10;Urinal should have right neighbor when created&#10;Urinal should be considered occupied when an available urinal, with an occupied left and right neighbor exists" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="urinalkata" />
       <setting name="path" value="com.dj.UrinalSpec" />
@@ -353,13 +372,13 @@
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Urinal should have a right neighbor when set" />
+      <setting name="testName" value="Urinal should default to Available status when created&#10;Urinal should return properly assigned position when requested&#10;Urinal should be unavailable when status is occupied&#10;Urinal should not have a left neighbor by default&#10;Urinal should not have a right neighbor by default&#10;Urinal should have left neighbor when created&#10;Urinal should have right neighbor when created&#10;Urinal should be considered occupied when an available urinal, with an occupied left and right neighbor exists" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="UrinalSpec.Urinal should return score of 1 when available, with occupied left and right" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+    <configuration default="false" name="UrinalSpec.Urinal should be considered available when an available urinal, in first position, with an non-existent left neighbor and occupied right neighbor" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="urinalkata" />
       <setting name="path" value="com.dj.UrinalSpec" />
@@ -368,13 +387,13 @@
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Urinal should return score of 1 when available, with occupied left and right" />
+      <setting name="testName" value="Urinal should be considered available when an available urinal, in first position, with an non-existent left neighbor and occupied right neighbor" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="UrinalSpec.Urinal should return score of 0 when occupied" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+    <configuration default="false" name="UrinalSpec.Urinal should default to Available status when created&#10;Urinal should return properly assigned position when requested&#10;Urinal should be unavailable when status is occupied&#10;Urinal should not have a left neighbor by default&#10;Urinal should not have a right neighbor by default&#10;Urinal should have left neighbor when created&#10;Urinal should have right neighbor when created&#10;Urinal should be considered occupied when an available urinal, with an occupied left and right neighbor exists&#10;Urinal should be considered available when an available urinal, in first position, with an non-existent left neighbor and occupied right neighbor&#10;Urinal should be considered available when an available urinal, in last position, with an occupied left neighbor and non-existent right neighbor" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="urinalkata" />
       <setting name="path" value="com.dj.UrinalSpec" />
@@ -383,7 +402,7 @@
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Urinal should return score of 0 when occupied" />
+      <setting name="testName" value="Urinal should default to Available status when created&#10;Urinal should return properly assigned position when requested&#10;Urinal should be unavailable when status is occupied&#10;Urinal should not have a left neighbor by default&#10;Urinal should not have a right neighbor by default&#10;Urinal should have left neighbor when created&#10;Urinal should have right neighbor when created&#10;Urinal should be considered occupied when an available urinal, with an occupied left and right neighbor exists&#10;Urinal should be considered available when an available urinal, in first position, with an non-existent left neighbor and occupied right neighbor&#10;Urinal should be considered available when an available urinal, in last position, with an occupied left neighbor and non-existent right neighbor" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <envs />
@@ -631,19 +650,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should have a left neighbor when set" />
-      <item index="1" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should not have an empty right neighbor by default" />
-      <item index="2" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should have a right neighbor when set" />
-      <item index="3" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should return score of 1 when available, with occupied left and right" />
-      <item index="4" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should return score of 0 when occupied" />
+      <item index="0" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should have left neighbor when created" />
+      <item index="1" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should default to Available status when created&#10;Urinal should return properly assigned position when requested&#10;Urinal should be unavailable when status is occupied&#10;Urinal should not have a left neighbor by default&#10;Urinal should not have a right neighbor by default&#10;Urinal should have left neighbor when created&#10;Urinal should have right neighbor when created" />
+      <item index="2" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should default to Available status when created&#10;Urinal should return properly assigned position when requested&#10;Urinal should be unavailable when status is occupied&#10;Urinal should not have a left neighbor by default&#10;Urinal should not have a right neighbor by default&#10;Urinal should have left neighbor when created&#10;Urinal should have right neighbor when created&#10;Urinal should be considered occupied when an available urinal, with an occupied left and right neighbor exists" />
+      <item index="3" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should be considered available when an available urinal, in first position, with an non-existent left neighbor and occupied right neighbor" />
+      <item index="4" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should default to Available status when created&#10;Urinal should return properly assigned position when requested&#10;Urinal should be unavailable when status is occupied&#10;Urinal should not have a left neighbor by default&#10;Urinal should not have a right neighbor by default&#10;Urinal should have left neighbor when created&#10;Urinal should have right neighbor when created&#10;Urinal should be considered occupied when an available urinal, with an occupied left and right neighbor exists&#10;Urinal should be considered available when an available urinal, in first position, with an non-existent left neighbor and occupied right neighbor&#10;Urinal should be considered available when an available urinal, in last position, with an occupied left neighbor and non-existent right neighbor" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should return score of 0 when occupied" />
-        <item index="1" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should return score of 1 when available, with occupied left and right" />
-        <item index="2" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should have a right neighbor when set" />
-        <item index="3" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should not have an empty right neighbor by default" />
-        <item index="4" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should have a left neighbor when set" />
+        <item index="0" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should default to Available status when created&#10;Urinal should return properly assigned position when requested&#10;Urinal should be unavailable when status is occupied&#10;Urinal should not have a left neighbor by default&#10;Urinal should not have a right neighbor by default&#10;Urinal should have left neighbor when created&#10;Urinal should have right neighbor when created&#10;Urinal should be considered occupied when an available urinal, with an occupied left and right neighbor exists&#10;Urinal should be considered available when an available urinal, in first position, with an non-existent left neighbor and occupied right neighbor&#10;Urinal should be considered available when an available urinal, in last position, with an occupied left neighbor and non-existent right neighbor" />
+        <item index="1" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should be considered available when an available urinal, in first position, with an non-existent left neighbor and occupied right neighbor" />
+        <item index="2" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should default to Available status when created&#10;Urinal should return properly assigned position when requested&#10;Urinal should be unavailable when status is occupied&#10;Urinal should not have a left neighbor by default&#10;Urinal should not have a right neighbor by default&#10;Urinal should have left neighbor when created&#10;Urinal should have right neighbor when created&#10;Urinal should be considered occupied when an available urinal, with an occupied left and right neighbor exists" />
+        <item index="3" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should default to Available status when created&#10;Urinal should return properly assigned position when requested&#10;Urinal should be unavailable when status is occupied&#10;Urinal should not have a left neighbor by default&#10;Urinal should not have a right neighbor by default&#10;Urinal should have left neighbor when created&#10;Urinal should have right neighbor when created" />
+        <item index="4" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should have left neighbor when created" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
@@ -703,66 +722,66 @@
       <workItem from="1457495405900" duration="1172000" />
       <workItem from="1457531367879" duration="568000" />
       <workItem from="1457573799963" duration="5936000" />
-      <workItem from="1457653278670" duration="442000" />
+      <workItem from="1457653278670" duration="13928000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UrinalSpec_Urinal_should_have_a_left_neighbor_when_set - 2016.03.09 at 21h 59m 55s.xml">
-      <configuration name="UrinalSpec.Urinal should have a left neighbor when set" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="UrinalSpec_Urinal_should_be_considered_available_when_an_available_urinal,_in_first_position,_with_an_non-existent_left_neighbor_and_occupied_right_neighbor - 2016.03.10 at 22h 32m 48s.xml">
+      <configuration name="UrinalSpec.Urinal should be considered available when an available urinal, in first position, with an non-existent left neighbor and occupied right neighbor" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="UrinalSpec_Urinal_should_have_a_right_neighbor_when_set - 2016.03.09 at 22h 04m 27s.xml">
-      <configuration name="UrinalSpec.Urinal should have a right neighbor when set" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="UrinalSpec_Urinal_should_be_considered_available_when_an_available_urinal,_in_first_position,_with_an_non-existent_left_neighbor_and_occupied_right_neighbor - 2016.03.10 at 22h 35m 19s.xml">
+      <configuration name="UrinalSpec.Urinal should be considered available when an available urinal, in first position, with an non-existent left neighbor and occupied right neighbor" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="UrinalSpec_Urinal_should_not_have_an_empty_right_neighbor_by_default - 2016.03.09 at 22h 04m 01s.xml">
-      <configuration name="UrinalSpec.Urinal should not have an empty right neighbor by default" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="UrinalSpec_Urinal_should_be_considered_available_when_an_available_urinal,_in_first_position,_with_an_non-existent_left_neighbor_and_occupied_right_neighbor - 2016.03.10 at 22h 35m 33s.xml">
+      <configuration name="UrinalSpec.Urinal should be considered available when an available urinal, in first position, with an non-existent left neighbor and occupied right neighbor" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="UrinalSpec_Urinal_should_return_Occupied_status_when_set_properly - 2016.03.09 at 21h 43m 11s.xml">
-      <configuration name="UrinalSpec.Urinal should return Occupied status when set properly" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="UrinalSpec_Urinal_should_be_unavailable_when_status_is_occupied - 2016.03.10 at 22h 04m 24s.xml">
+      <configuration name="UrinalSpec.Urinal should be unavailable when status is occupied" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="UrinalSpec_Urinal_should_return_isAvailable_false_when_created - 2016.03.09 at 21h 43m 38s.xml">
-      <configuration name="UrinalSpec.Urinal should return isAvailable false when created" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="UrinalSpec_Urinal_should_be_unavailable_when_status_is_occupied - 2016.03.10 at 22h 05m 23s.xml">
+      <configuration name="UrinalSpec.Urinal should be unavailable when status is occupied" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="UrinalSpec_Urinal_should_return_position_0_upon_initial_creation - 2016.03.09 at 21h 38m 00s.xml">
-      <configuration name="UrinalSpec.Urinal should return position 0 upon initial creation" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="UrinalSpec_Urinal_should_be_unavailable_when_status_is_occupied - 2016.03.10 at 22h 07m 03s.xml">
+      <configuration name="UrinalSpec.Urinal should be unavailable when status is occupied" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="UrinalSpec_Urinal_should_return_properly_assigned_position_after_setting - 2016.03.09 at 21h 39m 31s.xml">
-      <configuration name="UrinalSpec.Urinal should return properly assigned position after setting" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="UrinalSpec_Urinal_should_default_to_Available_status_when_created_Urinal_should_return_properly_assigned_position_when_requested_Urinal_should_be_unavailable_when_status_is_occupied - 2016.03.10 at 22h 07m 10s.xml">
+      <configuration name="UrinalSpec.Urinal should default to Available status when created&#10;Urinal should return properly assigned position when requested&#10;Urinal should be unavailable when status is occupied" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="UrinalSpec_Urinal_should_return_score_of_0_when_occupied - 2016.03.10 at 18h 48m 44s.xml">
-      <configuration name="UrinalSpec.Urinal should return score of 0 when occupied" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="UrinalSpec_Urinal_should_have_left_neighbor_when_created - 2016.03.10 at 22h 17m 41s.xml">
+      <configuration name="UrinalSpec.Urinal should have left neighbor when created" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="UrinalSpec_Urinal_should_return_score_of_1_when_available,_with_occupied_left_and_right - 2016.03.09 at 22h 13m 38s.xml">
-      <configuration name="UrinalSpec.Urinal should return score of 1 when available, with occupied left and right" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="UrinalSpec_Urinal_should_not_have_a_left_neighbor_by_default - 2016.03.10 at 22h 13m 52s.xml">
+      <configuration name="UrinalSpec.Urinal should not have a left neighbor by default" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="UrinalSpec_Urinal_should_return_score_of_1_when_available,_with_occupied_left_and_right - 2016.03.09 at 22h 16m 11s.xml">
-      <configuration name="UrinalSpec.Urinal should return score of 1 when available, with occupied left and right" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="UrinalSpec_Urinal_should_return_properly_assigned_position_when_requested - 2016.03.10 at 22h 00m 39s.xml">
+      <configuration name="UrinalSpec.Urinal should return properly assigned position when requested" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8118000" />
+    <option name="totallyTimeSpent" value="21604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2048" height="1253" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932073" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932073" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.288908" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.288908" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932073" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19840479" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19840479" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Execute" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39982802" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -777,7 +796,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="6" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -829,9 +850,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/dj/UrinalSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/UrinalStatus.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21941489">
+        <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
@@ -839,16 +868,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.075093865">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/dj/UrinalSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63829786">
-          <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.17396747">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
