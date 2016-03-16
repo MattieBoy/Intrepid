@@ -4,23 +4,34 @@ object MattieUrinal {
   
   def execute(size: Int): Unit = {
     val restroom: Restroom = new Restroom(size)
+    resetRanks(restroom.urinals)
     for (a <- 1 to size) {
-
-      chooseUrinal(restroom)
-      resetRanks(restroom)
+      updateRanks(restroom.urinals)
+      chooseUrinal(restroom.urinals)
     }
   }
   
-  def chooseUrinal(restroom: Restroom): Unit = {
+  def getMax(urinal1: Urinal, urinal2: Urinal): Urinal = if (urinal1.rank > urinal2.rank) urinal1 else urinal2
+  
+  def chooseUrinal(urinals: List[Urinal]): Unit = {
+    var max: Urinal = null
+
+    urinals.sliding(2).foreach { (list: List[Urinal]) =>
+      max = getMax(list.head, list.last)
+//      println("u1 - " + list.head + " u2 - " + list.last + " max == " + max.rank)
+    }
+    max.occupied = true
+  }
+  
+  def updateRanks(urinals: List[Urinal]) = {
     
   }
 
-  def resetRanks(restroom: Restroom): Restroom = {
-    restroom.urinals.foreach { urinal =>
+  def resetRanks(urinals: List[Urinal]): List[Urinal] = {
+    urinals.foreach { urinal =>
       if (urinal.occupied == false) urinal.rank = 0
     }
-
-    restroom
+    urinals
   }
 
 }
