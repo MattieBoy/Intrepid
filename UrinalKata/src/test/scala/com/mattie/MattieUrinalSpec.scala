@@ -40,17 +40,17 @@ class MattieUrinalSpec extends FlatSpec with Matchers {
     uri.rightNeighbor should equal(null)
     uri.rank should equal(1)
   }
-  
-  "GetMax" should "get urinal with largest rank" in {
+
+  "GetMax" should "get u with largest rank" in {
     val u1 = new Urinal(false, 3)
     val u2 = new Urinal(false, 2)
-    
+
     val result = MattieUrinal.getMax(u1, u2)
-    
+
     result.rank should equal(3)
   }
 
-  "ChooseUrinal" should "choose urinal with the highest rank" in {
+  "ChooseUrinal" should "choose u with the highest rank" in {
     val restroom = new Restroom(4)
     MattieUrinal.resetRanks(restroom.urinals)
     MattieUrinal.updateRanks(restroom.urinals)
@@ -61,14 +61,14 @@ class MattieUrinalSpec extends FlatSpec with Matchers {
     restroom.urinals(2).occupied should equal(false)
     restroom.urinals(3).occupied should equal(true)
   }
-  
-  "ChooseUrinal" should "choose appropriate urinal given same rank" in {
+
+  "ChooseUrinal" should "choose appropriate u given same rank" in {
     val restroom = new Restroom(4)
     restroom.urinals(0).rank = 0
     restroom.urinals(1).rank = 2
     restroom.urinals(2).rank = 2
     restroom.urinals(3).rank = 2
-    
+
     MattieUrinal.chooseUrinal(restroom.urinals)
 
     restroom.urinals(0).occupied should equal(false)
@@ -78,7 +78,7 @@ class MattieUrinalSpec extends FlatSpec with Matchers {
   }
 
 //  "MattieSpec" should "execute properly" in {
-//    MattieUrinal.main(4)
+//    MattieUrinal.main(5)
 //  }
   
 }

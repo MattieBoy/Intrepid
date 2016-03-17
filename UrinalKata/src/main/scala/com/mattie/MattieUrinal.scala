@@ -9,13 +9,13 @@ object MattieUrinal {
       updateRanks(restroom.urinals)
       chooseUrinal(restroom.urinals)
       resetRanks(restroom.urinals)
-//      println("-------------------------------------------------")
+      println("-------------------------------------------------")
     }
     updateRanks(restroom.urinals)
   }
   
   def getMax(urinal1: Urinal, urinal2: Urinal): Urinal = {
-    if (urinal1.rank > urinal2.rank) urinal1 else urinal2
+    List[Urinal](urinal1, urinal2).sortBy(r => (r.rank)).last
   }
   
   def chooseUrinal(urinals: List[Urinal]): Unit = {
@@ -40,20 +40,23 @@ object MattieUrinal {
 
         if (urinal.rightNeighbor == null) urinal.rank += 1
       }
-//      println("urinal is occupied = " + urinal.occupied + " rank = " + urinal.rank)
+      println("u is occupied = " + urinal.occupied + " rank = " + urinal.rank)
     }
   }
 
   def resetRanks(urinals: List[Urinal]): List[Urinal] = {
-    urinals.foreach { urinal =>
-      if (urinal.occupied == false) urinal.rank = 0
-    }
-    urinals
+    def c: Urinal => Urinal = (x) => setIt(x)
+    urinals.filter(_.occupied == false).map(c)
+  }
+  
+  def setIt (u: Urinal): Urinal = {
+    u.rank = 0
+    u
   }
 }
 
 class Restroom(size: Int) {
-  var urinals: List[Urinal] = Nil
+  var urinals: List[Urinal] = List[Urinal]()
 
     for (a <- 1 to size) {
       val uri: Urinal = new Urinal(false, a)
