@@ -2,29 +2,46 @@ package com.mattie
 
 object MattieUrinal {
   
-  def execute(size: Int): Unit = {
+  def main(size: Int): Unit = {
     val restroom: Restroom = new Restroom(size)
     resetRanks(restroom.urinals)
     for (a <- 1 to size) {
       updateRanks(restroom.urinals)
       chooseUrinal(restroom.urinals)
+      resetRanks(restroom.urinals)
+//      println("-------------------------------------------------")
     }
+    updateRanks(restroom.urinals)
   }
   
-  def getMax(urinal1: Urinal, urinal2: Urinal): Urinal = if (urinal1.rank > urinal2.rank) urinal1 else urinal2
+  def getMax(urinal1: Urinal, urinal2: Urinal): Urinal = {
+    if (urinal1.rank > urinal2.rank) urinal1 else urinal2
+  }
   
   def chooseUrinal(urinals: List[Urinal]): Unit = {
     var max: Urinal = null
+    val uris = urinals.filter(_.occupied == false)
 
-    urinals.sliding(2).foreach { (list: List[Urinal]) =>
+    uris.sliding(2).foreach { (list: List[Urinal]) =>
       max = getMax(list.head, list.last)
-//      println("u1 - " + list.head + " u2 - " + list.last + " max == " + max.rank)
     }
     max.occupied = true
   }
   
   def updateRanks(urinals: List[Urinal]) = {
-    
+    urinals.foreach { (urinal: Urinal) =>
+      if (urinal.occupied == false) {
+        if (urinal.leftNeighbor != null) {
+          if (urinal.leftNeighbor.occupied) urinal.rank -= 1 else urinal.rank += 1
+        }
+        if (urinal.rightNeighbor != null) {
+          if (urinal.rightNeighbor.occupied) urinal.rank -= 1 else urinal.rank += 1
+        }
+
+        if (urinal.rightNeighbor == null) urinal.rank += 1
+      }
+//      println("urinal is occupied = " + urinal.occupied + " rank = " + urinal.rank)
+    }
   }
 
   def resetRanks(urinals: List[Urinal]): List[Urinal] = {
@@ -33,7 +50,6 @@ object MattieUrinal {
     }
     urinals
   }
-
 }
 
 class Restroom(size: Int) {
@@ -50,21 +66,21 @@ class Restroom(size: Int) {
     urinals.foreach { (urinal: Urinal) =>
       if (urinal.rank == 1) { 
         urinal.leftNeighbor = null
-        urinal.rightNeighbor = Some(outerUrinals.head._2)
+        urinal.rightNeighbor = outerUrinals.head._2
       } else if (urinal.rank == urinals.size) { 
-        urinal.leftNeighbor = Some(outerUrinals.last._1)
+        urinal.leftNeighbor = outerUrinals.last._1
         urinal.rightNeighbor = null
       } else {
         val lila = innerUrinals(urinal.rank - 2)
-        urinal.leftNeighbor = Some(lila.head)
-        urinal.rightNeighbor = Some(lila.last)
+        urinal.leftNeighbor = lila.head
+        urinal.rightNeighbor = lila.last
       }
     }
 }
 
 class Urinal(pOccupied: Boolean, pRank: Int) {
   var occupied: Boolean = pOccupied
-  var leftNeighbor = None: Option[Urinal]
-  var rightNeighbor = None: Option[Urinal]
+  var leftNeighbor: Urinal = null
+  var rightNeighbor: Urinal = null
   var rank: Int = pRank
 }
