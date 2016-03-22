@@ -35,11 +35,11 @@ class Urinal {
     rightNeighbor.isDefined
   }
 
-  def noLeft(): Boolean = {
+  private def noLeft(): Boolean = {
     leftNeighbor.isEmpty || leftNeighbor.get.isOccupied()
   }
 
-  def noRight(): Boolean = {
+  private def noRight(): Boolean = {
     rightNeighbor.isEmpty || rightNeighbor.get.isOccupied()
   }
 
