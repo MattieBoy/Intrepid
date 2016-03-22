@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ad37b6d-8048-4f56-9fa8-2d755fc41812" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sbt.xml" afterPath="$PROJECT_DIR$/.idea/sbt.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/dj/UrinalSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/dj/UrinalSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala" />
     </list>
     <ignored path="UrinalKata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,14 +32,14 @@
     <favorites_list name="UrinalKata" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45341614">
+    <splitter split-orientation="horizontal" split-proportion="0.41874376">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Bathroom.scala" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.39950064">
-                  <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.36783043">
+                  <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
                   <folding />
                 </state>
               </provider>
@@ -57,8 +52,8 @@
           <file leaf-file-name="BathroomSpec.scala" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3795256">
-                  <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+                <state vertical-scroll-proportion="-1.7244389">
+                  <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -94,8 +89,8 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/dj/UrinalStatus.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/UrinalStatusSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/Urinal.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/UrinalSpec.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala" />
       </list>
@@ -593,38 +588,8 @@
       <recent name="com.dj" />
     </key>
   </component>
-  <component name="RunManager" selected="ScalaTest.BathroomSpec.Bathroom should default to zero urinals&#10;Bathroom should return proper urinal by position&#10;Bathroom should create proper number of urinals&#10;Bathroom should create two urinals and proper neighbor relationships">
-    <configuration default="false" name="UrinalSpec.Urinal should be considered occupied when an available urinal, with an occupied left and right neighbor exists" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="urinalkata" />
-      <setting name="path" value="com.dj.UrinalSpec" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Urinal should be considered occupied when an available urinal, with an occupied left and right neighbor exists" />
-      <setting name="testKind" value="Test name" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="UrinalSpec.Urinal should be considered available when an available urinal, in last position, with an occupied left neighbor and non-existent right neighbor" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="urinalkata" />
-      <setting name="path" value="com.dj.UrinalSpec" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Urinal should be considered available when an available urinal, in last position, with an occupied left neighbor and non-existent right neighbor" />
-      <setting name="testKind" value="Test name" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="BathroomSpec.Bathroom should create proper number of urinals" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+  <component name="RunManager" selected="ScalaTest.BathroomSpec.Bathroom should create two urinals and proper neighbor relationships">
+    <configuration default="false" name="BathroomSpec.Bathroom should return urinal position 2 when 2 urinals exist and 1 occupied" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="urinalkata" />
       <setting name="path" value="com.dj.BathroomSpec" />
@@ -633,13 +598,13 @@
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Bathroom should create proper number of urinals" />
+      <setting name="testName" value="Bathroom should return urinal position 2 when 2 urinals exist and 1 occupied" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="BathroomSpec.Bathroom should default to zero urinals&#10;Bathroom should return proper urinal by position&#10;Bathroom should create proper number of urinals&#10;Bathroom should create two urinals and proper neighbor relationships" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+    <configuration default="false" name="BathroomSpec.Bathroom should return proper urinal by position" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="urinalkata" />
       <setting name="path" value="com.dj.BathroomSpec" />
@@ -648,7 +613,22 @@
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Bathroom should default to zero urinals&#10;Bathroom should return proper urinal by position&#10;Bathroom should create proper number of urinals&#10;Bathroom should create two urinals and proper neighbor relationships" />
+      <setting name="testName" value="Bathroom should return proper urinal by position" />
+      <setting name="testKind" value="Test name" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="BathroomSpec.Bathroom should default to zero urinals" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="urinalkata" />
+      <setting name="path" value="com.dj.BathroomSpec" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="Bathroom should default to zero urinals" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <envs />
@@ -664,6 +644,21 @@
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
       <setting name="testName" value="Bathroom should create two urinals and proper neighbor relationships" />
+      <setting name="testKind" value="Test name" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="BathroomSpec.Bathroom should remove this later" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="urinalkata" />
+      <setting name="path" value="com.dj.BathroomSpec" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="Bathroom should remove this later" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <envs />
@@ -911,19 +906,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should be considered occupied when an available urinal, with an occupied left and right neighbor exists" />
-      <item index="1" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should be considered available when an available urinal, in last position, with an occupied left neighbor and non-existent right neighbor" />
-      <item index="2" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should create proper number of urinals" />
-      <item index="3" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should default to zero urinals&#10;Bathroom should return proper urinal by position&#10;Bathroom should create proper number of urinals&#10;Bathroom should create two urinals and proper neighbor relationships" />
-      <item index="4" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should create two urinals and proper neighbor relationships" />
+      <item index="0" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should return urinal position 2 when 2 urinals exist and 1 occupied" />
+      <item index="1" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should return proper urinal by position" />
+      <item index="2" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should default to zero urinals" />
+      <item index="3" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should create two urinals and proper neighbor relationships" />
+      <item index="4" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should remove this later" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should default to zero urinals&#10;Bathroom should return proper urinal by position&#10;Bathroom should create proper number of urinals&#10;Bathroom should create two urinals and proper neighbor relationships" />
-        <item index="1" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should create proper number of urinals" />
-        <item index="2" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should create two urinals and proper neighbor relationships" />
-        <item index="3" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should be considered available when an available urinal, in last position, with an occupied left neighbor and non-existent right neighbor" />
-        <item index="4" class="java.lang.String" itemvalue="ScalaTest.UrinalSpec.Urinal should be considered occupied when an available urinal, with an occupied left and right neighbor exists" />
+        <item index="0" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should create two urinals and proper neighbor relationships" />
+        <item index="1" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should remove this later" />
+        <item index="2" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should return proper urinal by position" />
+        <item index="3" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should default to zero urinals" />
+        <item index="4" class="java.lang.String" itemvalue="ScalaTest.BathroomSpec.Bathroom should return urinal position 2 when 2 urinals exist and 1 occupied" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
@@ -989,44 +984,44 @@
       <workItem from="1458231397797" duration="3259000" />
       <workItem from="1458483362567" duration="20720000" />
       <workItem from="1458568893359" duration="1089000" />
-      <workItem from="1458606738893" duration="1104000" />
+      <workItem from="1458606738893" duration="8314000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BathroomSpec_Bathroom_should_create_proper_number_of_urinals - 2016.03.21 at 08h 29m 44s.xml">
-      <configuration name="BathroomSpec.Bathroom should create proper number of urinals" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="BathroomSpec_Bathroom_should_create_two_urinals_and_proper_neighbor_relationships - 2016.03.21 at 22h 39m 04s.xml">
+      <configuration name="BathroomSpec.Bathroom should create two urinals and proper neighbor relationships" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="BathroomSpec_Bathroom_should_create_proper_number_of_urinals - 2016.03.21 at 08h 30m 40s.xml">
-      <configuration name="BathroomSpec.Bathroom should create proper number of urinals" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="BathroomSpec_Bathroom_should_create_two_urinals_and_proper_neighbor_relationships - 2016.03.21 at 22h 40m 53s.xml">
+      <configuration name="BathroomSpec.Bathroom should create two urinals and proper neighbor relationships" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="BathroomSpec_Bathroom_should_create_proper_number_of_urinals - 2016.03.21 at 08h 33m 06s.xml">
-      <configuration name="BathroomSpec.Bathroom should create proper number of urinals" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="BathroomSpec_Bathroom_should_create_two_urinals_and_proper_neighbor_relationships - 2016.03.21 at 22h 42m 09s.xml">
+      <configuration name="BathroomSpec.Bathroom should create two urinals and proper neighbor relationships" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="BathroomSpec_Bathroom_should_create_proper_number_of_urinals - 2016.03.21 at 08h 34m 24s.xml">
-      <configuration name="BathroomSpec.Bathroom should create proper number of urinals" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="BathroomSpec_Bathroom_should_create_two_urinals_and_proper_neighbor_relationships - 2016.03.21 at 22h 44m 32s.xml">
+      <configuration name="BathroomSpec.Bathroom should create two urinals and proper neighbor relationships" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="BathroomSpec_Bathroom_should_create_proper_number_of_urinals - 2016.03.21 at 08h 38m 32s.xml">
-      <configuration name="BathroomSpec.Bathroom should create proper number of urinals" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="BathroomSpec_Bathroom_should_create_two_urinals_and_proper_neighbor_relationships - 2016.03.21 at 22h 53m 33s.xml">
+      <configuration name="BathroomSpec.Bathroom should create two urinals and proper neighbor relationships" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="BathroomSpec_Bathroom_should_create_proper_number_of_urinals - 2016.03.21 at 10h 02m 42s.xml">
-      <configuration name="BathroomSpec.Bathroom should create proper number of urinals" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="BathroomSpec_Bathroom_should_remove_this_later - 2016.03.21 at 22h 45m 50s.xml">
+      <configuration name="BathroomSpec.Bathroom should remove this later" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="BathroomSpec_Bathroom_should_default_to_zero_urinals_Bathroom_should_return_proper_urinal_by_position_Bathroom_should_create_proper_number_of_urinals_Bathroom_should_create_two_urinals_and_proper_neighbor_relationships - 2016.03.21 at 10h 02m 59s.xml">
-      <configuration name="BathroomSpec.Bathroom should default to zero urinals&#10;Bathroom should return proper urinal by position&#10;Bathroom should create proper number of urinals&#10;Bathroom should create two urinals and proper neighbor relationships" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="BathroomSpec_Bathroom_should_remove_this_later - 2016.03.21 at 22h 48m 54s.xml">
+      <configuration name="BathroomSpec.Bathroom should remove this later" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="BathroomSpec_Bathroom_should_default_to_zero_urinals_Bathroom_should_return_proper_urinal_by_position_Bathroom_should_create_proper_number_of_urinals_Bathroom_should_create_two_urinals_and_proper_neighbor_relationships - 2016.03.21 at 10h 03m 57s.xml">
-      <configuration name="BathroomSpec.Bathroom should default to zero urinals&#10;Bathroom should return proper urinal by position&#10;Bathroom should create proper number of urinals&#10;Bathroom should create two urinals and proper neighbor relationships" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="BathroomSpec_Bathroom_should_remove_this_later - 2016.03.21 at 22h 50m 15s.xml">
+      <configuration name="BathroomSpec.Bathroom should remove this later" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="BathroomSpec_Bathroom_should_default_to_zero_urinals_Bathroom_should_return_proper_urinal_by_position_Bathroom_should_create_proper_number_of_urinals_Bathroom_should_create_two_urinals_and_proper_neighbor_relationships - 2016.03.21 at 20h 40m 57s.xml">
-      <configuration name="BathroomSpec.Bathroom should default to zero urinals&#10;Bathroom should return proper urinal by position&#10;Bathroom should create proper number of urinals&#10;Bathroom should create two urinals and proper neighbor relationships" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="BathroomSpec_Bathroom_should_remove_this_later - 2016.03.21 at 22h 51m 17s.xml">
+      <configuration name="BathroomSpec.Bathroom should remove this later" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="BathroomSpec_Bathroom_should_default_to_zero_urinals_Bathroom_should_return_proper_urinal_by_position_Bathroom_should_create_proper_number_of_urinals_Bathroom_should_create_two_urinals_and_proper_neighbor_relationships - 2016.03.21 at 20h 43m 38s.xml">
-      <configuration name="BathroomSpec.Bathroom should default to zero urinals&#10;Bathroom should return proper urinal by position&#10;Bathroom should create proper number of urinals&#10;Bathroom should create two urinals and proper neighbor relationships" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="BathroomSpec_Bathroom_should_remove_this_later - 2016.03.21 at 22h 52m 46s.xml">
+      <configuration name="BathroomSpec.Bathroom should remove this later" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54027000" />
+    <option name="totallyTimeSpent" value="61237000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2048" height="1253" extended-state="6" />
@@ -1037,25 +1032,25 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32760105" sideWeight="0.47058824" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2871883" sideWeight="0.33698905" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28632846" sideWeight="0.43868396" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2871883" sideWeight="0.66301095" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28632846" sideWeight="0.5613161" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932073" sideWeight="0.498006" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13609172" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13609172" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932073" sideWeight="0.4900299" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Execute" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39833713" sideWeight="0.48451152" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31126398" sideWeight="0.48255235" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932073" sideWeight="0.49202392" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1064,12 +1059,25 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="32" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="57" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="ScalaTestRunConfiguration">
-        <watch expression="bathroom" language="Scala" custom="" />
-        <watch expression="bathroom.urinals.size()" language="Scala" custom="" />
+        <watch expression="getUrinalOptionByPosition(2)" language="Scala" custom="" />
       </configuration>
     </watches-manager>
   </component>
@@ -1232,14 +1240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/UrinalStatus.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27792552">
@@ -1255,13 +1255,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalatest/scalatest_2.11/srcs/scalatest_2.11-2.2.4-sources.jar!/org/scalatest/OutcomeOf.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55886734">
-          <caret line="91" column="30" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/collection/mutable/ListBuffer.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3323398">
@@ -1269,25 +1262,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5692884">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalatest/scalatest_2.11/srcs/scalatest_2.11-2.2.4-sources.jar!/org/scalatest/OutcomeOf.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36160713">
+          <caret line="84" column="48" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalatest/scalatest_2.11/srcs/scalatest_2.11-2.2.4-sources.jar!/org/scalatest/Transformer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19821163">
+        <state vertical-scroll-proportion="0.19791667">
           <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.39950064">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.36783043">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3795256">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+        <state vertical-scroll-proportion="-1.7244389">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
