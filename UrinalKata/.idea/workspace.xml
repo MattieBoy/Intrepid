@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ad37b6d-8048-4f56-9fa8-2d755fc41812" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/dj/UrinalSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/dj/UrinalSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/dj/Bathroom_3UrinalsSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/dj/Bathroom_3UrinalsSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/dj/Bathroom_4UrinalsSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/dj/Bathroom_4UrinalsSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/dj/Bathroom_5UrinalsSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/dj/Bathroom_5UrinalsSpec.scala" />
     </list>
     <ignored path="UrinalKata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,21 +36,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Bathroom.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Bathroom.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="111" column="29" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.5524229">
+              <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BathroomSpec.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BathroomSpec.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2828194">
-              <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -109,9 +109,9 @@
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/Bathroom_4UrinalsSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/Bathroom_5UrinalsSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/UrinalSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala" />
       </list>
     </option>
   </component>
@@ -797,7 +797,7 @@
       <workItem from="1458231397797" duration="3259000" />
       <workItem from="1458483362567" duration="20720000" />
       <workItem from="1458568893359" duration="1089000" />
-      <workItem from="1458606738893" duration="10458000" />
+      <workItem from="1458606738893" duration="10871000" />
     </task>
     <servers />
   </component>
@@ -834,7 +834,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63381000" />
+    <option name="totallyTimeSpent" value="63794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2048" height="1253" extended-state="6" />
@@ -878,12 +878,6 @@
           <line>28</line>
           <properties />
           <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="57" />
@@ -1123,14 +1117,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="111" column="29" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/dj/UrinalSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1141,8 +1127,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2828194">
-          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5524229">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
           <folding />
         </state>
       </provider>

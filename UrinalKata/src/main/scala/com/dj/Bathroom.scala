@@ -7,28 +7,27 @@ class Bathroom {
     this()
 
     val _isSingle = isSingleStallFacility(numberOfUrinals)
+
     if (_isSingle) {
-      var list = new scala.collection.mutable.ListBuffer[Urinal]()
-      list += createSingleUrinal
-      urinals = list.toList
+      urinals = List(createSingleUrinal)
     } else {
       urinals = createMultiUrinalFacility(numberOfUrinals)
     }
 
-    def _isMiddle(p: Int): Boolean = { p > 1 && p < numberOfUrinals }
+    def _isInMiddle(p: Int): Boolean = { p > 1 && p < numberOfUrinals }
 
-    def linkUrinal(p: Urinal): Urinal = {
-      if (p.position == 1) return linkFirstUrinal()
-      if (_isMiddle(p.position)) return linkMiddleUrinal(p.position)
-      linkRightUrinal(p.position)
+    def linkUrinal(u: Urinal): Urinal = {
+      if (u.position == 1) return linkFirst()
+      if (_isInMiddle(u.position)) return linkMiddle(u.position)
+      linkLast(u.position)
     }
+
     val linked: Urinal => Urinal = (t) => linkUrinal(t)
     urinals.map(linked)
-    println("urinals = " + urinals)
   }
 
-  def getUrinalOptionByPosition(i: Int): Option[Urinal] = {
-    urinals.filter(_.position == i).headOption
+  def getOptionalUrinalByPosition(p: Int): Option[Urinal] = {
+    urinals.filter(_.position == p).headOption
   }
 
   def numberOfUrinals: Int = {
@@ -58,33 +57,33 @@ class Bathroom {
     new Urinal(p)
   }
 
-  def linkFirstUrinal(): Urinal = {
-    val u = getUrinalOptionByPosition(1) match {
+  def linkFirst(): Urinal = {
+    val u = getOptionalUrinalByPosition(1) match {
       case Some(u) => u
       case None => new Urinal(1)
     }
-    u.rightNeighbor = getUrinalOptionByPosition(2)
+    u.rightNeighbor = getOptionalUrinalByPosition(2)
     u
   }
 
-  def linkMiddleUrinal(p: Int): Urinal = {
-    val u = getUrinalOptionByPosition(p) match {
+  def linkMiddle(p: Int): Urinal = {
+    val u = getOptionalUrinalByPosition(p) match {
       case Some(u) => u
       case None => new Urinal(p)
     }
 
-    u.leftNeighbor = getUrinalOptionByPosition(p - 1)
-    u.rightNeighbor = getUrinalOptionByPosition(p + 1)
+    u.leftNeighbor = getOptionalUrinalByPosition(p - 1)
+    u.rightNeighbor = getOptionalUrinalByPosition(p + 1)
     u
   }
 
-  def linkRightUrinal(p: Int): Urinal = {
-    val u = getUrinalOptionByPosition(p) match {
+  def linkLast(p: Int): Urinal = {
+    val u = getOptionalUrinalByPosition(p) match {
       case Some(u) => u
       case None => new Urinal(p)
     }
 
-    u.leftNeighbor = getUrinalOptionByPosition(p - 1)
+    u.leftNeighbor = getOptionalUrinalByPosition(p - 1)
     u
   }
 
