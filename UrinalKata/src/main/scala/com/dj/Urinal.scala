@@ -1,29 +1,18 @@
 package com.dj
 
-class Urinal() {
-  private var _leftNeighbor: Option[Urinal] = None
-  private var _rightNeighbor: Option[Urinal] = None
-  private var _position: Int = 0
-  private var _status: UrinalStatus = Available
+class Urinal {
+  var leftNeighbor: Option[Urinal] = None
+  var rightNeighbor: Option[Urinal] = None
+  var position: Int = 0
+  var status: UrinalStatus = Available
 
-  def leftNeighbor = _leftNeighbor
-
-  def leftNeighbor_=(value: Urinal): Unit = _leftNeighbor = Option(value)
-
-  def rightNeighbor = _rightNeighbor
-
-  def rightNeighbor_=(value: Urinal): Unit = _rightNeighbor = Option(value)
-
-  def position = _position
-
-  def position_=(value: Int): Unit = _position = value
-
-  def status = _status
-
-  def status_=(value: UrinalStatus): Unit = _status = value
+  def this(p: Int) = {
+    this()
+    position = p
+  }
 
   def isAvailable(): Boolean = {
-    if (isOccupied(this)) return false
+    if (this.isOccupied()) return false
 
     if (isFirstPositionAndAvailable()) return true
 
@@ -34,31 +23,39 @@ class Urinal() {
     true
   }
 
-  private def isOccupied(urinal: Urinal): Boolean = {
-    urinal.status == Occupied
+  private def isOccupied(): Boolean = {
+    this.status == Occupied
   }
 
   def hasLeftNeighbor(): Boolean = {
-    _leftNeighbor != None
+    leftNeighbor.isDefined
   }
 
   def hasRightNeighbor(): Boolean = {
-    _rightNeighbor != None
+    rightNeighbor.isDefined
+  }
+
+  def noLeft(): Boolean = {
+    leftNeighbor.isEmpty || leftNeighbor.get.isOccupied()
+  }
+
+  def noRight(): Boolean = {
+    rightNeighbor.isEmpty || rightNeighbor.get.isOccupied()
   }
 
   private def isMiddlePositionAndAvailable(): Boolean = {
-    return (hasLeftNeighbor() && isOccupied(leftNeighbor get)) || (hasRightNeighbor() && isOccupied(rightNeighbor get))
+    return noLeft() || noRight()
   }
 
   private def isFirstPositionAndAvailable(): Boolean = {
-    !hasRightNeighbor() && isUrinalAvailable()
+    !hasRightNeighbor() && available()
   }
 
   private def isLastPositionAndAvailable(): Boolean = {
-    !hasLeftNeighbor() && isUrinalAvailable()
+    !hasLeftNeighbor() && available()
   }
 
-  private def isUrinalAvailable(): Boolean = {
+  private def available(): Boolean = {
     status == Available
   }
 
