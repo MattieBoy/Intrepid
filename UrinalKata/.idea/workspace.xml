@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ad37b6d-8048-4f56-9fa8-2d755fc41812" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala" />
     </list>
     <ignored path="UrinalKata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,21 +42,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BathroomSpec.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BathroomSpec.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4276808">
+            <state vertical-scroll-proportion="0.0">
               <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Urinal.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Urinal.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.89401495">
+              <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -98,8 +96,8 @@
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/Bathroom_3UrinalsSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/Bathroom_4UrinalsSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/Bathroom_5UrinalsSpec.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala" />
       </list>
     </option>
   </component>
@@ -785,7 +783,7 @@
       <workItem from="1458231397797" duration="3259000" />
       <workItem from="1458483362567" duration="20720000" />
       <workItem from="1458568893359" duration="1089000" />
-      <workItem from="1458606738893" duration="9986000" />
+      <workItem from="1458606738893" duration="10040000" />
     </task>
     <servers />
   </component>
@@ -822,7 +820,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62909000" />
+    <option name="totallyTimeSpent" value="62963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2048" height="1253" extended-state="6" />
@@ -836,7 +834,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28632846" sideWeight="0.43868396" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28632846" sideWeight="0.5613161" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28632846" sideWeight="0.5613161" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932073" sideWeight="0.498006" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13609172" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1119,18 +1117,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4276808">
-          <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.89401495">
+          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
           <folding />
         </state>
       </provider>

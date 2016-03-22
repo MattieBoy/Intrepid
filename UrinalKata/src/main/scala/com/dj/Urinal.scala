@@ -35,16 +35,16 @@ class Urinal {
     rightNeighbor.isDefined
   }
 
-  private def noLeft(): Boolean = {
+  private def noLeft: Boolean = {
     leftNeighbor.isEmpty || leftNeighbor.get.isOccupied()
   }
 
-  private def noRight(): Boolean = {
+  private def noRight: Boolean = {
     rightNeighbor.isEmpty || rightNeighbor.get.isOccupied()
   }
 
   private def isMiddlePositionAndAvailable(): Boolean = {
-    return noLeft() || noRight()
+    return noLeft || noRight
   }
 
   private def isFirstPositionAndAvailable(): Boolean = {
