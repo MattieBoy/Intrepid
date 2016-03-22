@@ -26,10 +26,10 @@ class BathroomSpec extends FlatSpec with Matchers {
 
     2 should ===(bathroom.numberOfUrinals)
 
-    false should ===(bathroom.getUrinalOptionByPosition(1).get.hasLeftNeighbor())
+    false should ===(bathroom.getUrinalOptionByPosition(1).get.hasLeftNeighbor)
     bathroom.getUrinalOptionByPosition(1).get.rightNeighbor === (bathroom.getUrinalOptionByPosition(2).get)
     bathroom.getUrinalOptionByPosition(2).get.leftNeighbor === (bathroom.getUrinalOptionByPosition(1)).get
-    false should ===(bathroom.getUrinalOptionByPosition(2).get.hasRightNeighbor())
+    false should ===(bathroom.getUrinalOptionByPosition(2).get.hasRightNeighbor)
 
   }
 
@@ -39,12 +39,12 @@ class BathroomSpec extends FlatSpec with Matchers {
 
     3 should ===(bathroom.numberOfUrinals)
 
-    bathroom.getUrinalOptionByPosition(1).get.hasLeftNeighbor() should ===(false)
+    bathroom.getUrinalOptionByPosition(1).get.hasLeftNeighbor should ===(false)
     bathroom.getUrinalOptionByPosition(1).get.rightNeighbor.get should ===(bathroom.getUrinalOptionByPosition(2).get)
     bathroom.getUrinalOptionByPosition(2).get.leftNeighbor.get should ===(bathroom.getUrinalOptionByPosition(1).get)
     bathroom.getUrinalOptionByPosition(2).get.rightNeighbor.get should ===(bathroom.getUrinalOptionByPosition(3).get)
     bathroom.getUrinalOptionByPosition(3).get.leftNeighbor.get should ===(bathroom.getUrinalOptionByPosition(2).get)
-    bathroom.getUrinalOptionByPosition(3).get.hasRightNeighbor() should ===(false)
+    bathroom.getUrinalOptionByPosition(3).get.hasRightNeighbor should ===(false)
 
   }
 
@@ -54,14 +54,14 @@ class BathroomSpec extends FlatSpec with Matchers {
 
     4 should ===(bathroom.numberOfUrinals)
 
-    bathroom.getUrinalOptionByPosition(1).get.hasLeftNeighbor() should ===(false)
+    bathroom.getUrinalOptionByPosition(1).get.hasLeftNeighbor should ===(false)
     bathroom.getUrinalOptionByPosition(1).get.rightNeighbor.get should ===(bathroom.getUrinalOptionByPosition(2).get)
     bathroom.getUrinalOptionByPosition(2).get.leftNeighbor.get should ===(bathroom.getUrinalOptionByPosition(1).get)
     bathroom.getUrinalOptionByPosition(2).get.rightNeighbor.get should ===(bathroom.getUrinalOptionByPosition(3).get)
     bathroom.getUrinalOptionByPosition(3).get.leftNeighbor.get should ===(bathroom.getUrinalOptionByPosition(2).get)
     bathroom.getUrinalOptionByPosition(3).get.rightNeighbor.get should ===(bathroom.getUrinalOptionByPosition(4).get)
     bathroom.getUrinalOptionByPosition(4).get.leftNeighbor.get should ===(bathroom.getUrinalOptionByPosition(3).get)
-    bathroom.getUrinalOptionByPosition(4).get.hasRightNeighbor() should ===(false)
+    bathroom.getUrinalOptionByPosition(4).get.hasRightNeighbor should ===(false)
 
   }
 

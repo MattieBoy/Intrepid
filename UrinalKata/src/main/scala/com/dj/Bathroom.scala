@@ -109,7 +109,7 @@ class Bathroom {
   }
 
   private def getUrinalWithNoNeighbor = {
-    val a = urinals.filter(_.isAvailable())
+    val a = urinals.filter(_.isAvailable)
     a.lastOption
   }
 

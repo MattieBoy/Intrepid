@@ -20,33 +20,33 @@ class UrinalSpec extends FlatSpec with Matchers {
     val urinal: Urinal = new Urinal
     urinal.status = Occupied
 
-    false should === (urinal.isAvailable())
+    false should === (urinal.isAvailable)
   }
 
   "Urinal" should "not have a left neighbor by default" in {
     val urinal: Urinal = new Urinal
 
-    false should === (urinal.hasLeftNeighbor())
+    false should === (urinal.hasLeftNeighbor)
   }
 
   "Urinal" should "not have a right neighbor by default" in {
     val urinal: Urinal = new Urinal
 
-    false should === (urinal.hasRightNeighbor())
+    false should === (urinal.hasRightNeighbor)
   }
 
   "Urinal" should "have left neighbor when created" in {
     val urinal: Urinal = new Urinal(2)
     urinal.leftNeighbor = Option(new Urinal(1))
 
-    true should === (urinal.hasLeftNeighbor())
+    true should === (urinal.hasLeftNeighbor)
   }
 
   "Urinal" should "have right neighbor when created" in {
     val urinal: Urinal = new Urinal(1)
     urinal.rightNeighbor = Option(new Urinal(2))
 
-    true should === (urinal.hasRightNeighbor())
+    true should === (urinal.hasRightNeighbor)
   }
 
   "Urinal" should "be considered occupied when an available urinal, with an occupied left and right neighbor exists" in {
@@ -60,7 +60,7 @@ class UrinalSpec extends FlatSpec with Matchers {
     right.status = Occupied
     middle.rightNeighbor = Option(right)
 
-    false should === (middle.isAvailable())
+    false should === (middle.isAvailable)
   }
 
   "Urinal" should "be considered available when an available urinal, in first position, with an non-existent left neighbor and occupied right neighbor" in {
@@ -70,7 +70,7 @@ class UrinalSpec extends FlatSpec with Matchers {
     right.status = Occupied
     urinal.rightNeighbor = Option(right)
 
-    true should === (urinal.isAvailable())
+    true should === (urinal.isAvailable)
   }
 
   "Urinal" should "be considered available when an available urinal, in last position, with an occupied left neighbor and non-existent right neighbor" in {
@@ -80,7 +80,7 @@ class UrinalSpec extends FlatSpec with Matchers {
     left.status = Occupied
     urinal.leftNeighbor = Option(left)
 
-    true should === (urinal.isAvailable())
+    true should === (urinal.isAvailable)
   }
 
 }

@@ -11,51 +11,51 @@ class Urinal {
     position = p
   }
 
-  def isAvailable(): Boolean = {
-    if (this.isOccupied()) return false
+  def isAvailable: Boolean = {
+    if (this.isOccupied) return false
 
-    if (isFirstPositionAndAvailable()) return true
+    if (isFirstPositionAndAvailable) return true
 
-    if (isLastPositionAndAvailable()) return true
+    if (isLastPositionAndAvailable) return true
 
-    if (isMiddlePositionAndAvailable()) return false
+    if (isMiddlePositionAndAvailable) return false
 
     true
   }
 
-  private def isOccupied(): Boolean = {
+  private def isOccupied: Boolean = {
     this.status == Occupied
   }
 
-  def hasLeftNeighbor(): Boolean = {
+  def hasLeftNeighbor: Boolean = {
     leftNeighbor.isDefined
   }
 
-  def hasRightNeighbor(): Boolean = {
+  def hasRightNeighbor: Boolean = {
     rightNeighbor.isDefined
   }
 
   private def noLeft: Boolean = {
-    leftNeighbor.isEmpty || leftNeighbor.get.isOccupied()
+    leftNeighbor.isEmpty || leftNeighbor.get.isOccupied
   }
 
   private def noRight: Boolean = {
-    rightNeighbor.isEmpty || rightNeighbor.get.isOccupied()
+    rightNeighbor.isEmpty || rightNeighbor.get.isOccupied
   }
 
-  private def isMiddlePositionAndAvailable(): Boolean = {
+  private def isMiddlePositionAndAvailable: Boolean = {
     return noLeft || noRight
   }
 
-  private def isFirstPositionAndAvailable(): Boolean = {
-    !hasRightNeighbor() && available()
+  private def isFirstPositionAndAvailable: Boolean = {
+    !hasRightNeighbor && available
   }
 
-  private def isLastPositionAndAvailable(): Boolean = {
-    !hasLeftNeighbor() && available()
+  private def isLastPositionAndAvailable: Boolean = {
+    !hasLeftNeighbor && available
   }
 
-  private def available(): Boolean = {
+  private def available: Boolean = {
     status == Available
   }
 
