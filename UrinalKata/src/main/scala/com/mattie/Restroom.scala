@@ -4,7 +4,7 @@ class Restroom(size: Int) {
   var urinals: List[Urinal] = Nil
 
   for (a <- 1 to size) {
-    val uri: Urinal = new Urinal(false, a)
+    val uri: Urinal = new Urinal(Available, a)
     urinals = urinals ::: List(uri)
   }
 

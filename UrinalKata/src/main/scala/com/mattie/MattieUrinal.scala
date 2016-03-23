@@ -4,13 +4,13 @@ object MattieUrinal {
 
   def main(size: Int): Unit = {
     val restroom: Restroom = new Restroom(size)
-    resetRanks(restroom.urinals)
+    restroom.urinals = resetRanks(restroom.urinals)
     for (a <- 1 to size) {
-      updateRanks(restroom.urinals)
+      restroom.urinals = updateRanks(restroom.urinals)
       chooseUrinal(restroom.urinals)
-      resetRanks(restroom.urinals)
+      restroom.urinals = resetRanks(restroom.urinals)
     }
-    updateRanks(restroom.urinals)
+    restroom.urinals = updateRanks(restroom.urinals)
   }
 
   def whichIsHighestRankedUrinal(u1: Urinal, u2: Urinal): Urinal = {
@@ -19,12 +19,14 @@ object MattieUrinal {
 
   def chooseUrinal(urinals: List[Urinal]): Unit = {
     var max: Urinal = null
-    val uris = urinals.filter(_.occupied == false)
+    val uris = urinals.filter(_.status == Available)
 
     uris.sliding(2).foreach { (list: List[Urinal]) =>
       max = whichIsHighestRankedUrinal(list.head, list.last)
     }
-    max.occupied = true
+
+    // this can cause a null pointer exception
+    max.status = Occupied
   }
 
   def updateRanks(urinals: List[Urinal]): List[Urinal] = {
@@ -48,12 +50,17 @@ object MattieUrinal {
 
     val update: Urinal => Urinal = (t) => updateRank(t)
 
-    urinals.filter(_.isNotOccupied).map(update)
+    urinals.filter(_.isAvailable).map(update)
   }
 
 
   def resetRanks(urinals: List[Urinal]): List[Urinal] = {
-    urinals.map { case (u: Urinal) => (if (!u.isOccupied) u.rank = 0) }
-    urinals
+    def resetRank(u: Urinal): Urinal = {
+      if (u.isAvailable) { u.rank = 0 }
+      u
+    }
+
+    val reset: Urinal => Urinal = (t) => resetRank(t)
+    urinals.map(reset)
   }
 }

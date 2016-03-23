@@ -11,19 +11,19 @@ class MattieUrinalSpec extends FlatSpec with Matchers {
 
   "Restroom" should "reset rank to zero for unoccupied urinals" in {
     val restroom = new Restroom(4)
-    restroom.urinals(3).occupied = true
-    MattieUrinal.resetRanks(restroom.urinals)
+    restroom.urinals(3).status = Occupied
+    val newUrinals = MattieUrinal.resetRanks(restroom.urinals)
 
-    restroom.urinals(0).rank should equal(0)
-    restroom.urinals(1).rank should equal(0)
-    restroom.urinals(2).rank should equal(0)
-    restroom.urinals(3).rank should equal(4)
+    newUrinals(0).rank should equal(0)
+    newUrinals(1).rank should equal(0)
+    newUrinals(2).rank should equal(0)
+    newUrinals(3).rank should equal(4)
   }
 
   "Restroom" should "update rank values for unoccupied urinals" in {
     val restroom = new Restroom(4)
     MattieUrinal.resetRanks(restroom.urinals)
-    restroom.urinals(0).occupied = true
+    restroom.urinals(0).status = Occupied
 
     MattieUrinal.updateRanks(restroom.urinals)
 
@@ -34,19 +34,19 @@ class MattieUrinalSpec extends FlatSpec with Matchers {
   }
 
   "Urinal" should "have properties set when created" in {
-    val uri = new Urinal(false, 1)
-    uri.occupied should equal(false)
+    val uri = new Urinal(Available, 1)
+    uri.status should equal(Available)
     uri.leftNeighbor should equal(null)
     uri.rightNeighbor should equal(null)
     uri.rank should equal(1)
   }
   
   "GetMax" should "get urinal with largest rank" in {
-    val u1 = new Urinal(false, 3)
-    val u2 = new Urinal(false, 2)
+    val u1 = new Urinal(Available, 3)
+    val u2 = new Urinal(Available, 2)
     
     val result = MattieUrinal.whichIsHighestRankedUrinal(u1, u2)
-    
+
     result.rank should equal(3)
   }
 
@@ -56,10 +56,10 @@ class MattieUrinalSpec extends FlatSpec with Matchers {
     MattieUrinal.updateRanks(restroom.urinals)
     MattieUrinal.chooseUrinal(restroom.urinals)
 
-    restroom.urinals(0).occupied should equal(false)
-    restroom.urinals(1).occupied should equal(false)
-    restroom.urinals(2).occupied should equal(false)
-    restroom.urinals(3).occupied should equal(true)
+
+    restroom.urinals(1).status should equal(Available)
+    restroom.urinals(2).status should equal(Available)
+    restroom.urinals(3).status should equal(Occupied)
   }
   
   "ChooseUrinal" should "choose appropriate urinal given same rank" in {
@@ -71,10 +71,10 @@ class MattieUrinalSpec extends FlatSpec with Matchers {
     
     MattieUrinal.chooseUrinal(restroom.urinals)
 
-    restroom.urinals(0).occupied should equal(false)
-    restroom.urinals(1).occupied should equal(false)
-    restroom.urinals(2).occupied should equal(false)
-    restroom.urinals(3).occupied should equal(true)
+    restroom.urinals(0).status should equal(Available)
+    restroom.urinals(1).status should equal(Available)
+    restroom.urinals(2).status should equal(Available)
+    restroom.urinals(3).status should equal(Occupied)
   }
 
 //  "MattieSpec" should "execute properly" in {

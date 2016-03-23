@@ -72,7 +72,7 @@ class BathroomSpec extends FlatSpec with Matchers {
     0 should ===(bathroom.numberOfUrinals)
   }
 
-  "Bathroom" should "not have an available urinal when only one occupied" in {
+  "Bathroom" should "not have an available urinal when only one status" in {
 
     val bathroom: Bathroom = new Bathroom(1)
     bathroom.getUrinalByPosition(1).get.status = Occupied
@@ -100,7 +100,7 @@ class BathroomSpec extends FlatSpec with Matchers {
 
   }
 
-  "Bathroom" should "return urinal position 2 when 2 urinals exist and 1 occupied" in {
+  "Bathroom" should "return urinal position 2 when 2 urinals exist and 1 status" in {
 
     val bathroom: Bathroom = new Bathroom(2)
     bathroom.getUrinalByPosition(1).get.status = Occupied
@@ -111,7 +111,7 @@ class BathroomSpec extends FlatSpec with Matchers {
 
   }
 
-  "Bathroom" should "return urinal position 1 when 2 urinals exist and 2 occupied" in {
+  "Bathroom" should "return urinal position 1 when 2 urinals exist and 2 status" in {
 
     val bathroom: Bathroom = new Bathroom(2)
     bathroom.getUrinalByPosition(2).get.status = Occupied
@@ -122,7 +122,7 @@ class BathroomSpec extends FlatSpec with Matchers {
 
   }
 
-  "Bathroom" should "return urinal position 0 when 2 urinals exist and both occupied" in {
+  "Bathroom" should "return urinal position 0 when 2 urinals exist and both status" in {
 
     val bathroom: Bathroom = new Bathroom(2)
     bathroom.getUrinalByPosition(1).get.status = Occupied

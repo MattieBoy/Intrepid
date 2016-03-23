@@ -11,7 +11,7 @@ class Bathroom_3UrinalsSpec extends FlatSpec with Matchers {
     bathroom.getUrinalByPosition(3).get should ===(bathroom.nextAvailable.get)
   }
 
-  "Bathroom" should "return position 1 when 3 urinals exist and position 3 is occupied" in {
+  "Bathroom" should "return position 1 when 3 urinals exist and position 3 is status" in {
     val bathroom: Bathroom = new Bathroom(3)
     bathroom.getUrinalByPosition(3).get.status = Occupied
 
@@ -20,7 +20,7 @@ class Bathroom_3UrinalsSpec extends FlatSpec with Matchers {
     bathroom.getUrinalByPosition(1).get should ===(bathroom.nextAvailable.get)
   }
 
-  "Bathroom" should "return position 3 when 3 urinals exist and position 2 is occupied" in {
+  "Bathroom" should "return position 3 when 3 urinals exist and position 2 is status" in {
     val bathroom: Bathroom = new Bathroom(3)
     bathroom.getUrinalByPosition(2).get.status = Occupied
 
@@ -29,7 +29,7 @@ class Bathroom_3UrinalsSpec extends FlatSpec with Matchers {
     bathroom.getUrinalByPosition(3).get should ===(bathroom.nextAvailable.get)
   }
 
-  "Bathroom" should "return position 3 when 3 urinals exist and position 1 is occupied" in {
+  "Bathroom" should "return position 3 when 3 urinals exist and position 1 is status" in {
     val bathroom: Bathroom = new Bathroom(3)
     bathroom.getUrinalByPosition(1).get.status = Occupied
 
@@ -38,7 +38,7 @@ class Bathroom_3UrinalsSpec extends FlatSpec with Matchers {
     bathroom.getUrinalByPosition(3).get should ===(bathroom.nextAvailable.get)
   }
 
-  "Bathroom" should "return position 1 when 3 urinals exist and position 2 and 3 occupied" in {
+  "Bathroom" should "return position 1 when 3 urinals exist and position 2 and 3 status" in {
     val bathroom: Bathroom = new Bathroom(3)
     bathroom.getUrinalByPosition(2).get.status = Occupied
     bathroom.getUrinalByPosition(3).get.status = Occupied
@@ -48,7 +48,7 @@ class Bathroom_3UrinalsSpec extends FlatSpec with Matchers {
     bathroom.getUrinalByPosition(1).get should ===(bathroom.nextAvailable.get)
   }
 
-  "Bathroom" should "return position 3 when 3 urinals exist and position 1 and 2 occupied" in {
+  "Bathroom" should "return position 3 when 3 urinals exist and position 1 and 2 status" in {
     val bathroom: Bathroom = new Bathroom(3)
     bathroom.getUrinalByPosition(1).get.status = Occupied
     bathroom.getUrinalByPosition(2).get.status = Occupied
@@ -58,7 +58,7 @@ class Bathroom_3UrinalsSpec extends FlatSpec with Matchers {
     bathroom.getUrinalByPosition(3).get should ===(bathroom.nextAvailable.get)
   }
 
-  "Bathroom" should "return None when 3 urinals exist and all are occupied" in {
+  "Bathroom" should "return None when 3 urinals exist and all are status" in {
     val bathroom: Bathroom = new Bathroom(3)
     bathroom.getUrinalByPosition(1).get.status = Occupied
     bathroom.getUrinalByPosition(2).get.status = Occupied

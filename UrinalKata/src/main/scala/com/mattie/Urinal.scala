@@ -1,16 +1,16 @@
 package com.mattie
 
-class Urinal(pOccupied: Boolean, pRank: Int) {
-  var occupied: Boolean = pOccupied
+class Urinal(_status: UrinalStatus, pRank: Int) {
+  var status: UrinalStatus = _status
   var leftNeighbor: Urinal = null
   var rightNeighbor: Urinal = null
   var rank: Int = pRank
 
   def isOccupied: Boolean = {
-    true == occupied
+    Occupied == status
   }
 
-  def isNotOccupied: Boolean = {
-    false == occupied
+  def isAvailable: Boolean = {
+    Available == status
   }
 }
