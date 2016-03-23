@@ -5,4 +5,8 @@ class Urinal(pOccupied: Boolean, pRank: Int) {
   var leftNeighbor: Urinal = null
   var rightNeighbor: Urinal = null
   var rank: Int = pRank
+
+  def isOccupied: Boolean = {
+    true == occupied
+  }
 }

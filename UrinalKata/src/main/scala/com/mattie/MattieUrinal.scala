@@ -1,7 +1,7 @@
 package com.mattie
 
 object MattieUrinal {
-  
+
   def main(size: Int): Unit = {
     val restroom: Restroom = new Restroom(size)
     resetRanks(restroom.urinals)
@@ -12,11 +12,11 @@ object MattieUrinal {
     }
     updateRanks(restroom.urinals)
   }
-  
+
   def getMax(urinal1: Urinal, urinal2: Urinal): Urinal = {
     if (urinal1.rank > urinal2.rank) urinal1 else urinal2
   }
-  
+
   def chooseUrinal(urinals: List[Urinal]): Unit = {
     var max: Urinal = null
     val uris = urinals.filter(_.occupied == false)
@@ -26,7 +26,7 @@ object MattieUrinal {
     }
     max.occupied = true
   }
-  
+
   def updateRanks(urinals: List[Urinal]) = {
     urinals.foreach { (urinal: Urinal) =>
       if (urinal.occupied == false) {
@@ -43,9 +43,7 @@ object MattieUrinal {
   }
 
   def resetRanks(urinals: List[Urinal]): List[Urinal] = {
-    urinals.foreach { urinal =>
-      if (urinal.occupied == false) urinal.rank = 0
-    }
+    urinals.map{case (u:Urinal) => (if (!u.isOccupied) u.rank = 0)}
     urinals
   }
 }
