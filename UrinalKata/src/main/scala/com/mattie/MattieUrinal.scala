@@ -22,21 +22,23 @@ object MattieUrinal {
   }
 
   def updateRanks(urinals: List[Urinal]): List[Urinal] = {
-    def updateLeftNeighborRankBasedOnOccupancy(u: Urinal): Unit = {
+    def updateRankBasedOnLeftNeighbor(u: Urinal) = {
       if (u.leftNeighbor != null) {
         if (u.leftNeighbor.isOccupied) u.rank -= 1 else u.rank += 1
       }
     }
-    def updateRightNeighborRankBasedOnOccupancy(u: Urinal): Unit = {
+
+    def updateRankBasedOnRightNeighbor(u: Urinal) = {
       if (u.rightNeighbor != null) {
         if (u.rightNeighbor.isOccupied) u.rank -= 1 else u.rank += 1
+      } else {
+       u.rank += 1
       }
     }
-    def updateRank(u: Urinal): Urinal = {
-      updateLeftNeighborRankBasedOnOccupancy(u)
-      updateRightNeighborRankBasedOnOccupancy(u)
 
-      if (u.rightNeighbor == null) u.rank += 1
+    def updateRank(u: Urinal): Urinal = {
+      updateRankBasedOnLeftNeighbor(u)
+      updateRankBasedOnRightNeighbor(u)
       u
     }
 
