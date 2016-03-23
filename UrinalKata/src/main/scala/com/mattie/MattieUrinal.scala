@@ -29,22 +29,21 @@ object MattieUrinal {
 
   def updateRanks(urinals: List[Urinal]): List[Urinal] = {
     def updateRank(u: Urinal): Urinal = {
-      if (u.occupied == false) {
-        if (u.leftNeighbor != null) {
-          if (u.leftNeighbor.occupied) u.rank -= 1 else u.rank += 1
-        }
-        if (u.rightNeighbor != null) {
-          if (u.rightNeighbor.occupied) u.rank -= 1 else u.rank += 1
-        }
-
-        if (u.rightNeighbor == null) u.rank += 1
+      if (u.leftNeighbor != null) {
+        if (u.leftNeighbor.isOccupied) u.rank -= 1 else u.rank += 1
       }
+      if (u.rightNeighbor != null) {
+        if (u.rightNeighbor.isOccupied) u.rank -= 1 else u.rank += 1
+      }
+
+      if (u.rightNeighbor == null) u.rank += 1
       u
     }
 
+    more refactoring for the updateRanks method
     val update: Urinal => Urinal = (t) => updateRank(t)
 
-    urinals.map(update)
+    urinals.filter(_.isNotOccupied).map(update)
   }
 
 
