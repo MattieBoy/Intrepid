@@ -17,16 +17,8 @@ object MattieUrinal {
     List[Urinal](u1, u2).sortWith(_.rank < _.rank).last
   }
 
-  def chooseUrinal(urinals: List[Urinal]): Unit = {
-    var max: Urinal = null
-    val uris = urinals.filter(_.status == Available)
-
-    uris.sliding(2).foreach { (list: List[Urinal]) =>
-      max = whichIsHighestRankedUrinal(list.head, list.last)
-    }
-
-    // this can cause a null pointer exception
-    max.status = Occupied
+  def chooseUrinal(urinals: List[Urinal]) = {
+    urinals.filter(_.status == Available).sortWith(_.rank < _.rank).last.status = Occupied
   }
 
   def updateRanks(urinals: List[Urinal]): List[Urinal] = {
@@ -56,7 +48,9 @@ object MattieUrinal {
 
   def resetRanks(urinals: List[Urinal]): List[Urinal] = {
     def resetRank(u: Urinal): Urinal = {
-      if (u.isAvailable) { u.rank = 0 }
+      if (u.isAvailable) {
+        u.rank = 0
+      }
       u
     }
 

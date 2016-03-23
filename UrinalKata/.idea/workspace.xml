@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ad37b6d-8048-4f56-9fa8-2d755fc41812" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/mattie/Urinal.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/mattie/Urinal.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala" />
     </list>
     <ignored path="UrinalKata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,21 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Urinal.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/Urinal.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1339207">
-              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MattieUrinal.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MattieUrinal.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3013216">
+              <caret line="19" column="17" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -101,9 +90,9 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/mattie/UrinalStatus.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/mattie/Restroom.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/mattie/MattieUrinalSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/mattie/Urinal.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala" />
       </list>
     </option>
   </component>
@@ -1180,18 +1169,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/Urinal.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.050220266">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/Urinal.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1339207">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.3013216">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="18" />
           <folding />
         </state>
       </provider>
