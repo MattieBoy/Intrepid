@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ad37b6d-8048-4f56-9fa8-2d755fc41812" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/mattie/Urinal.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/mattie/Urinal.scala" />
     </list>
     <ignored path="UrinalKata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,21 +52,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Urinal.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Urinal.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/Urinal.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.30319148">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MattieUrinal.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MattieUrinal.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32845744">
-              <caret line="29" column="16" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -119,8 +119,8 @@
         <option value="$PROJECT_DIR$/src/test/scala/com/dj/BathroomSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/dj/Bathroom.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/mattie/Restroom.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/mattie/Urinal.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/mattie/Urinal.scala" />
       </list>
     </option>
   </component>
@@ -811,7 +811,7 @@
       <workItem from="1458483362567" duration="20720000" />
       <workItem from="1458568893359" duration="1089000" />
       <workItem from="1458606738893" duration="12792000" />
-      <workItem from="1458691959044" duration="3448000" />
+      <workItem from="1458691959044" duration="3615000" />
     </task>
     <servers />
   </component>
@@ -848,7 +848,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69163000" />
+    <option name="totallyTimeSpent" value="69330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2048" height="1253" extended-state="6" />
@@ -1158,14 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/Urinal.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/dj/Urinal.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1192,8 +1184,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32845744">
-          <caret line="29" column="16" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/Urinal.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30319148">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="19" />
           <folding />
         </state>
       </provider>

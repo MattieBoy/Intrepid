@@ -9,4 +9,8 @@ class Urinal(pOccupied: Boolean, pRank: Int) {
   def isOccupied: Boolean = {
     true == occupied
   }
+
+  def isNotOccupied: Boolean = {
+    false == occupied
+  }
 }
