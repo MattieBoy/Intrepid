@@ -4,6 +4,7 @@
     <list default="true" id="8ad37b6d-8048-4f56-9fa8-2d755fc41812" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/mattie/MattieUrinalSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/mattie/MattieUrinalSpec.scala" />
     </list>
     <ignored path="UrinalKata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,8 +67,8 @@
       <file leaf-file-name="MattieUrinal.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37898937">
-              <caret line="15" column="11" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.1263298">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -812,7 +813,7 @@
       <workItem from="1458483362567" duration="20720000" />
       <workItem from="1458568893359" duration="1089000" />
       <workItem from="1458606738893" duration="12792000" />
-      <workItem from="1458691959044" duration="2744000" />
+      <workItem from="1458691959044" duration="3017000" />
     </task>
     <servers />
   </component>
@@ -849,7 +850,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68459000" />
+    <option name="totallyTimeSpent" value="68732000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2048" height="1253" extended-state="6" />
@@ -1193,8 +1194,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37898937">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.1263298">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="32" />
           <folding />
         </state>
       </provider>

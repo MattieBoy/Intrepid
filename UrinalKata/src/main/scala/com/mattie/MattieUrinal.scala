@@ -13,8 +13,8 @@ object MattieUrinal {
     updateRanks(restroom.urinals)
   }
 
-  def getMax(urinal1: Urinal, urinal2: Urinal): Urinal = {
-    List[Urinal](urinal1, urinal2).sortWith(_.rank < _.rank).last
+  def whichIsHighestRankedUrinal(u1: Urinal, u2: Urinal): Urinal = {
+    List[Urinal](u1, u2).sortWith(_.rank < _.rank).last
   }
 
   def chooseUrinal(urinals: List[Urinal]): Unit = {
@@ -22,7 +22,7 @@ object MattieUrinal {
     val uris = urinals.filter(_.occupied == false)
 
     uris.sliding(2).foreach { (list: List[Urinal]) =>
-      max = getMax(list.head, list.last)
+      max = whichIsHighestRankedUrinal(list.head, list.last)
     }
     max.occupied = true
   }
@@ -43,7 +43,7 @@ object MattieUrinal {
   }
 
   def resetRanks(urinals: List[Urinal]): List[Urinal] = {
-    urinals.map{case (u:Urinal) => (if (!u.isOccupied) u.rank = 0)}
+    urinals.map { case (u: Urinal) => (if (!u.isOccupied) u.rank = 0) }
     urinals
   }
 }

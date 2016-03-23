@@ -45,7 +45,7 @@ class MattieUrinalSpec extends FlatSpec with Matchers {
     val u1 = new Urinal(false, 3)
     val u2 = new Urinal(false, 2)
     
-    val result = MattieUrinal.getMax(u1, u2)
+    val result = MattieUrinal.whichIsHighestRankedUrinal(u1, u2)
     
     result.rank should equal(3)
   }
