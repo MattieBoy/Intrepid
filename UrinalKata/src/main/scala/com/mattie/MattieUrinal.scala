@@ -29,24 +29,27 @@ object MattieUrinal {
   }
   
   def updateRanks(urinals: List[Urinal]) = {
-    urinals.foreach { (urinal: Urinal) =>
-      if (urinal.occupied == false) {
-        if (urinal.leftNeighbor != null) {
-          if (urinal.leftNeighbor.occupied) urinal.rank -= 1 else urinal.rank += 1
-        }
-        if (urinal.rightNeighbor != null) {
-          if (urinal.rightNeighbor.occupied) urinal.rank -= 1 else urinal.rank += 1
-        }
-
-        if (urinal.rightNeighbor == null) urinal.rank += 1
+    def updateUrinal: Urinal => Urinal = (u) => calculateRank(u)
+    urinals.map(updateUrinal)
+  }
+  
+  def calculateRank(urinal: Urinal) = {
+    if (urinal.occupied == false) {
+      if (urinal.leftNeighbor != null) {
+        if (urinal.leftNeighbor.occupied) urinal.rank -= 1 else urinal.rank += 1
       }
-      println("u is occupied = " + urinal.occupied + " rank = " + urinal.rank)
+      if (urinal.rightNeighbor != null) {
+        if (urinal.rightNeighbor.occupied) urinal.rank -= 1 else urinal.rank += 1
+      }
+
+      if (urinal.rightNeighbor == null) urinal.rank += 1
     }
+  urinal
   }
 
   def resetRanks(urinals: List[Urinal]): List[Urinal] = {
-    def c: Urinal => Urinal = (x) => setIt(x)
-    urinals.filter(_.occupied == false).map(c)
+    def resetUrinal: Urinal => Urinal = (x) => setIt(x)
+    urinals.filter(_.occupied == false).map(resetUrinal)
   }
   
   def setIt (u: Urinal): Urinal = {
