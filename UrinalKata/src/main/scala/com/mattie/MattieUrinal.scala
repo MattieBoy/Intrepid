@@ -9,7 +9,6 @@ object MattieUrinal {
       updateRanks(restroom.urinals)
       chooseUrinal(restroom.urinals)
       resetRanks(restroom.urinals)
-//      println("-------------------------------------------------")
     }
     updateRanks(restroom.urinals)
   }
@@ -40,7 +39,6 @@ object MattieUrinal {
 
         if (urinal.rightNeighbor == null) urinal.rank += 1
       }
-//      println("urinal is occupied = " + urinal.occupied + " rank = " + urinal.rank)
     }
   }
 
