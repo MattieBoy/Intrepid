@@ -27,20 +27,26 @@ object MattieUrinal {
     max.occupied = true
   }
 
-  def updateRanks(urinals: List[Urinal]) = {
-    urinals.foreach { (urinal: Urinal) =>
-      if (urinal.occupied == false) {
-        if (urinal.leftNeighbor != null) {
-          if (urinal.leftNeighbor.occupied) urinal.rank -= 1 else urinal.rank += 1
+  def updateRanks(urinals: List[Urinal]): List[Urinal] = {
+    def updateRank(u: Urinal): Urinal = {
+      if (u.occupied == false) {
+        if (u.leftNeighbor != null) {
+          if (u.leftNeighbor.occupied) u.rank -= 1 else u.rank += 1
         }
-        if (urinal.rightNeighbor != null) {
-          if (urinal.rightNeighbor.occupied) urinal.rank -= 1 else urinal.rank += 1
+        if (u.rightNeighbor != null) {
+          if (u.rightNeighbor.occupied) u.rank -= 1 else u.rank += 1
         }
 
-        if (urinal.rightNeighbor == null) urinal.rank += 1
+        if (u.rightNeighbor == null) u.rank += 1
       }
+      u
     }
+
+    val update: Urinal => Urinal = (t) => updateRank(t)
+
+    urinals.map(update)
   }
+
 
   def resetRanks(urinals: List[Urinal]): List[Urinal] = {
     urinals.map { case (u: Urinal) => (if (!u.isOccupied) u.rank = 0) }
