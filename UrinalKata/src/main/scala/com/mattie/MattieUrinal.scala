@@ -28,10 +28,13 @@ object MattieUrinal {
   }
 
   def updateRanks(urinals: List[Urinal]): List[Urinal] = {
-    def updateRank(u: Urinal): Urinal = {
+    def updateLeftNeighborRankBasedOnOccupancy(u: Urinal): Unit = {
       if (u.leftNeighbor != null) {
         if (u.leftNeighbor.isOccupied) u.rank -= 1 else u.rank += 1
       }
+    }
+    def updateRank(u: Urinal): Urinal = {
+      updateLeftNeighborRankBasedOnOccupancy(u)
       if (u.rightNeighbor != null) {
         if (u.rightNeighbor.isOccupied) u.rank -= 1 else u.rank += 1
       }
@@ -40,7 +43,6 @@ object MattieUrinal {
       u
     }
 
-    more refactoring for the updateRanks method
     val update: Urinal => Urinal = (t) => updateRank(t)
 
     urinals.filter(_.isNotOccupied).map(update)
