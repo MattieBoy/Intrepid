@@ -33,11 +33,14 @@ object MattieUrinal {
         if (u.leftNeighbor.isOccupied) u.rank -= 1 else u.rank += 1
       }
     }
-    def updateRank(u: Urinal): Urinal = {
-      updateLeftNeighborRankBasedOnOccupancy(u)
+    def updateRightNeighborRankBasedOnOccupancy(u: Urinal): Unit = {
       if (u.rightNeighbor != null) {
         if (u.rightNeighbor.isOccupied) u.rank -= 1 else u.rank += 1
       }
+    }
+    def updateRank(u: Urinal): Urinal = {
+      updateLeftNeighborRankBasedOnOccupancy(u)
+      updateRightNeighborRankBasedOnOccupancy(u)
 
       if (u.rightNeighbor == null) u.rank += 1
       u

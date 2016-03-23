@@ -55,8 +55,8 @@
       <file leaf-file-name="MattieUrinal.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36835107">
-              <caret line="36" column="43" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.24202128">
+              <caret line="35" column="46" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -802,7 +802,7 @@
       <workItem from="1458483362567" duration="20720000" />
       <workItem from="1458568893359" duration="1089000" />
       <workItem from="1458606738893" duration="12792000" />
-      <workItem from="1458691959044" duration="4601000" />
+      <workItem from="1458691959044" duration="4720000" />
     </task>
     <servers />
   </component>
@@ -839,7 +839,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70316000" />
+    <option name="totallyTimeSpent" value="70435000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="626" y="23" width="1422" height="1253" extended-state="0" />
@@ -1183,8 +1183,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/mattie/MattieUrinal.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36835107">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.24202128">
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="47" />
           <folding />
         </state>
       </provider>
