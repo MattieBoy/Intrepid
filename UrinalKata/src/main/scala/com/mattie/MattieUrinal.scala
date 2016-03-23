@@ -50,9 +50,7 @@ object MattieUrinal {
 
   def resetRanks(urinals: List[Urinal]): List[Urinal] = {
     def resetRank(u: Urinal): Urinal = {
-      if (u.isAvailable) {
-        u.rank = 0
-      }
+      if (u.isAvailable) u.rank = 0
       u
     }
 
