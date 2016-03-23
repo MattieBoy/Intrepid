@@ -14,7 +14,7 @@ object MattieUrinal {
   }
 
   def getMax(urinal1: Urinal, urinal2: Urinal): Urinal = {
-    if (urinal1.rank > urinal2.rank) urinal1 else urinal2
+    List[Urinal](urinal1, urinal2).sortWith(_.rank < _.rank).last
   }
 
   def chooseUrinal(urinals: List[Urinal]): Unit = {
