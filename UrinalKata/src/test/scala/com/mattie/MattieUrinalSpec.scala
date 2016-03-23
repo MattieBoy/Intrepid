@@ -12,12 +12,12 @@ class MattieUrinalSpec extends FlatSpec with Matchers {
   "Restroom" should "reset rank to zero for unoccupied urinals" in {
     val restroom = new Restroom(4)
     restroom.urinals(3).status = Occupied
-    val newUrinals = MattieUrinal.resetRanks(restroom.urinals)
+    MattieUrinal.resetRanks(restroom.urinals)
 
-    newUrinals(0).rank should equal(0)
-    newUrinals(1).rank should equal(0)
-    newUrinals(2).rank should equal(0)
-    newUrinals(3).rank should equal(4)
+    restroom.urinals(0).rank should equal(0)
+    restroom.urinals(1).rank should equal(0)
+    restroom.urinals(2).rank should equal(0)
+    restroom.urinals(3).rank should equal(4)
   }
 
   "Restroom" should "update rank values for unoccupied urinals" in {
