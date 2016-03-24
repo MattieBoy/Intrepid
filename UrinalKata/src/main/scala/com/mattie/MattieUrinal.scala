@@ -1,5 +1,7 @@
 package com.mattie
 
+import javax.swing.RowFilter.ComparisonType
+
 object MattieUrinal {
   
   def main(size: Int): Unit = {
@@ -20,6 +22,7 @@ object MattieUrinal {
   
   def chooseUrinal(urinals: List[Urinal]): Unit = {
     var max: Urinal = null
+
     val uris = urinals.filter(_.occupied == false)
 
     uris.sliding(2).foreach { (list: List[Urinal]) =>
@@ -29,11 +32,12 @@ object MattieUrinal {
   }
   
   def updateRanks(urinals: List[Urinal]) = {
-    def updateUrinal: Urinal => Urinal = (u) => calculateRank(u)
-    urinals.map(updateUrinal)
+    def updateUrinalRank: Urinal => Urinal = (u) => calculateRank(u)
+    urinals.map(updateUrinalRank)
   }
   
   def calculateRank(urinal: Urinal) = {
+    
     if (urinal.occupied == false) {
       if (urinal.leftNeighbor != null) {
         if (urinal.leftNeighbor.occupied) urinal.rank -= 1 else urinal.rank += 1
@@ -48,11 +52,11 @@ object MattieUrinal {
   }
 
   def resetRanks(urinals: List[Urinal]): List[Urinal] = {
-    def resetUrinal: Urinal => Urinal = (x) => setIt(x)
+    def resetUrinal: Urinal => Urinal = (x) => reSetIt(x)
     urinals.filter(_.occupied == false).map(resetUrinal)
   }
   
-  def setIt (u: Urinal): Urinal = {
+  def reSetIt (u: Urinal): Urinal = {
     u.rank = 0
     u
   }
@@ -68,19 +72,36 @@ class Restroom(size: Int) {
 
     val outerUrinals = urinals.init zip urinals.tail
     val innerUrinals = urinals.sliding(3).toList
+//    urinals.foreach { (urinal: Urinal) =>
+//      if (urinal.rank == 1) { 
+//        urinal.leftNeighbor = None
+//        urinal.rightNeighbor = outerUrinals.head._2
+//      } else if (urinal.rank == urinals.size) { 
+//        urinal.leftNeighbor = outerUrinals.last._1
+//        urinal.rightNeighbor = None
+//      } else {
+//        val lila = innerUrinals(urinal.rank - 2)
+//        urinal.leftNeighbor = lila.head
+//        urinal.rightNeighbor = lila.last
+//      }
+//    }
+  //val statuses = tweets.map(status => if (status.isTruncate) None else Some(status.getText)).flatten
+  def outerSetter: (Urinal, Urinal) => Unit = (u1, u2) => setOuterNeighbors((u1, u2))
+  outerUrinals.map(outerSetter)
+
+  //urinal is first or last
+  def setOuterNeighbors(outer: (Urinal, Urinal)) = {
+      outer._1.leftNeighbor = null
+      outer._1.rightNeighbor = outer._2
+      
+      outer._2.leftNeighbor = outer._1
+      outer._2.rightNeighbor = null
+    }
   
-    urinals.foreach { (urinal: Urinal) =>
-      if (urinal.rank == 1) { 
-        urinal.leftNeighbor = null
-        urinal.rightNeighbor = outerUrinals.head._2
-      } else if (urinal.rank == urinals.size) { 
-        urinal.leftNeighbor = outerUrinals.last._1
-        urinal.rightNeighbor = null
-      } else {
-        val lila = innerUrinals(urinal.rank - 2)
-        urinal.leftNeighbor = lila.head
-        urinal.rightNeighbor = lila.last
-      }
+    //urinal is middle
+  def setInnerNeighbors(inner: List[Urinal]) = {
+      inner(1).leftNeighbor = inner(0)
+      inner(1).rightNeighbor = inner(2)
     }
 }
 
