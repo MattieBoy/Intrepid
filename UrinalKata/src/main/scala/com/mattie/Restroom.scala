@@ -12,16 +12,32 @@ class Restroom(size: Int) {
   val innerUrinals = urinals.sliding(3).toList
 
   urinals.foreach { (urinal: Urinal) =>
-    if (urinal.rank == 1) {
+    if (isFirstPosition(urinal)) {
       urinal.leftNeighbor = null
       urinal.rightNeighbor = outerUrinals.head._2
-    } else if (urinal.rank == urinals.size) {
-      urinal.leftNeighbor = outerUrinals.last._1
-      urinal.rightNeighbor = null
-    } else {
+    }
+
+    if (isMiddlePosition(urinal)) {
       val lila = innerUrinals(urinal.rank - 2)
       urinal.leftNeighbor = lila.head
       urinal.rightNeighbor = lila.last
     }
+
+    if (isLastPosition(urinal)) {
+      urinal.leftNeighbor = outerUrinals.last._1
+      urinal.rightNeighbor = null
+    }
+  }
+
+  def isFirstPosition(u: Urinal): Boolean = {
+    1 == u.rank
+  }
+
+  def isLastPosition(u: Urinal): Boolean = {
+    u.rank == urinals.size
+  }
+
+  def isMiddlePosition(u: Urinal): Boolean = {
+    u.rank > 1 && u.rank < urinals.size
   }
 }
