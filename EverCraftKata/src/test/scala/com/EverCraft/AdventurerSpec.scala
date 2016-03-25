@@ -19,4 +19,14 @@ class AdventurerSpec extends FlatSpec with Matchers {
     subject.alignment = Good
     Good should === (subject.alignment)
   }
+  
+  "Adventurer" should "have 5 hit points by default" in {
+    val subject = new Adventurer
+    5 should === (subject.hitPoints)
+  }
+  
+  "Adventurer" should "have an Armor Class of 10 by default" in {
+    val subject = new Adventurer
+    10 should === (subject.armorClass)
+  }
 }
