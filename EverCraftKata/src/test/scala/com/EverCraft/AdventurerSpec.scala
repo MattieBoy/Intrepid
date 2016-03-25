@@ -29,4 +29,40 @@ class AdventurerSpec extends FlatSpec with Matchers {
     val subject = new Adventurer
     10 should === (subject.armorClass)
   }
+  
+  "Adventurer" should "be able to strike another adventurer by rolling a value between 1 - 20" in {
+    val subject = new Adventurer
+    val attackStrike = subject.strike
+    attackStrike should be <= 20
+    attackStrike should be >= 1
+  }
+  
+  "Opponent" should "be hit if Adventurers attackRoll is >= to opponent armor class" in {
+    val subject = new Adventurer
+    val opponent = new Adventurer
+    val attackRoll = 13
+    subject.calculateHit(attackRoll, opponent)
+    
+    4 should === (opponent.hitPoints)
+  }
+
+  "Opponent" should "not be hit if Adventurers attackRoll is <= to opponent armor class" in {
+    val subject = new Adventurer
+    val opponent = new Adventurer
+    val attackRoll = 5
+    subject.calculateHit(attackRoll, opponent)
+
+    5 should === (opponent.hitPoints)
+  }
+
+  "Opponent" should "be hit if Adventurers attackRoll is == to opponent armor class" in {
+    val subject = new Adventurer
+    val opponent = new Adventurer
+    val attackRoll = 10
+    subject.calculateHit(attackRoll, opponent)
+
+    4 should === (opponent.hitPoints)
+  }
+  
+  
 }
