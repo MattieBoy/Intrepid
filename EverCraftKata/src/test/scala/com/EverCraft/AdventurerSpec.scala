@@ -64,5 +64,23 @@ class AdventurerSpec extends FlatSpec with Matchers {
     4 should === (opponent.hitPoints)
   }
   
+  //Not sure this test is meaningful. need to figure out how to control the roll rather than set opponent AC?
+  "Adventurer" should "be able to attack and damage an opponent" in {
+    val subject = new Adventurer
+    val opponent = new Adventurer
+    opponent.armorClass = 1
+    subject.attack(opponent)
+    
+    4 should === (opponent.hitPoints)
+  }
+  
+  "Adventurer" should "be able to kill opponent when their hit points are reduced to zero" in  {
+    val subject = new Adventurer
+    val opponent = new Adventurer
+    opponent.hitPoints = 1
+    subject.attack(opponent)
+    
+    true should === (opponent.isDead)
+  }
   
 }
