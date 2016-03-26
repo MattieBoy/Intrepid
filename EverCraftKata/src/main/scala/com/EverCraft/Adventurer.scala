@@ -5,7 +5,7 @@ import scala.util.Random
 /**
  * Created by matthewrighter on 3/25/16.
  */
-class Adventurer {
+class Adventurer  {
   //Variable Declarations
   private var _name = ""
   private var _alignment: Alignment = Neutral
