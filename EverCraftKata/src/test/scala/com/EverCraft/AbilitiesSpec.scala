@@ -32,4 +32,12 @@ class AbilitiesSpec extends FlatSpec with Matchers {
     Strength.modifyBy(3)
     13 shouldBe Strength.value
   }
+
+  "Abilities" should "be able to set rando using range" in  {
+    val ability: Abilities = Strength
+    val randoNumber = ability.rando(1 to 20)
+    
+    20 should be >= randoNumber
+    1 should be <= randoNumber
+  }
 }

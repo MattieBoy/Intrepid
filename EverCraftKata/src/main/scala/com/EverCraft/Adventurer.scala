@@ -33,12 +33,22 @@ class Adventurer{
   def wisdom = _wisdom
   def charisma = _charisma
   
-
   //Setters
   def name_= (n: String) = _name = n
   def alignment_= (a: Alignment) = _alignment = a
   def hitPoints_= (hp: Int) = _hitPoints = hp
   def armorClass_= (ac: Int) = _armorClass = ac
+  
+  var adventurerAbilities: List[Abilities] = List(strength, dexterity, constitution, intelligence, wisdom, charisma)
+  
+  def setModifiedAbilities(abilities: List[Abilities]) = {
+    val c: Abilities => Unit = (x) => randomizedModify(x)
+    abilities.map(c)
+  }
+  
+  def randomizedModify(a: Abilities) = {
+    a.modifyBy(a.rando(-9 to 10))
+  }
   
   def attack(opponent: Adventurer) = {
     val attackRoll = strike

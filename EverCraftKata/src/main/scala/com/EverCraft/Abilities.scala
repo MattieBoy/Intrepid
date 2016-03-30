@@ -1,5 +1,7 @@
 package com.EverCraft
 
+import scala.util.Random
+
 /**
  * Created by matthewrighter on 3/25/16.
  */
@@ -9,8 +11,13 @@ trait Abilities {
   def modifyBy(i: Int)
   def isTooHigh(i: Int): Boolean = i > 20
   def isTooLow(i:Int): Boolean = i < 1
+  def rando(r: Range): Int = {
+    val rnd = new Random()
+    r(rnd.nextInt(r length))
+  }
 
-  val abilitiesModifiers = Map(1 -> -5,
+  val abilitiesModifiers = Map(
+    1 -> -5,
     2 -> -4,
     3 -> -4,
     4 -> -3,

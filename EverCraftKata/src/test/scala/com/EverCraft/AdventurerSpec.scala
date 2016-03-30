@@ -125,4 +125,13 @@ class AdventurerSpec extends FlatSpec with Matchers {
 //    1 should ===(subject.wisdom.value)
 //    1 should ===(subject.charisma.value)
   }
+  
+  "Adventurer" should "be able to have ability modified with a random value for uniqueness" in {
+    Strength.value = 10
+    val subject = new Adventurer
+    
+    subject.randomizedModify(Strength)
+    20 should be >= Strength.value
+    1 should be <= Strength.value
+  }
 }
