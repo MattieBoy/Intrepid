@@ -80,14 +80,49 @@ class AdventurerSpec extends FlatSpec with Matchers {
     4 should === (opponent.hitPoints)
   }
   
-  "Adventurer" should "be able to kill opponent when their hit points are reduced to zero" in  {
+  "Adventurer" should "be able to kill opponent when their hit points are reduced to zero" in {
     val subject = new Adventurer
     val opponent = new Adventurer
     opponent.hitPoints = 1
+    opponent.armorClass = 1
     subject.attack(opponent)
     
     true should === (opponent.isDead)
   }
   
-  
+  "Adventurer" should "not be allowed to have an ability score greater than 20" in {
+    Strength.value = 10
+    val subject = new Adventurer
+    subject.strength.modifyBy(20)
+//    subject.constitution.modifyBy(20)
+//    subject.dexterity.modifyBy(20)
+//    subject.intelligence.modifyBy(20)
+//    subject.wisdom.modifyBy(20)
+//    subject.charisma.modifyBy(20)
+    
+    20 should === (subject.strength.value)
+//    20 should === (subject.constitution.value)
+//    20 should === (subject.dexterity.value)
+//    20 should === (subject.intelligence.value)
+//    20 should === (subject.wisdom.value)
+//    20 should === (subject.charisma.value)
+  }
+
+  "Adventurer" should "not be allowed to have an ability score less than 1" in {
+    Strength.value = 10
+    val subject = new Adventurer
+    subject.strength.modifyBy(-20)
+//    subject.constitution.modifyBy(-20)
+//    subject.dexterity.modifyBy(-20)
+//    subject.intelligence.modifyBy(-20)
+//    subject.wisdom.modifyBy(-20)
+//    subject.charisma.modifyBy(-20)
+
+    1 should ===(subject.strength.value)
+//    1 should ===(subject.constitution.value)
+//    1 should ===(subject.dexterity.value)
+//    1 should ===(subject.intelligence.value)
+//    1 should ===(subject.wisdom.value)
+//    1 should ===(subject.charisma.value)
+  }
 }

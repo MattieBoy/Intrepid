@@ -5,7 +5,7 @@ import scala.util.Random
 /**
  * Created by matthewrighter on 3/25/16.
  */
-class Adventurer  {
+class Adventurer{
   //Variable Declarations
   private var _name = ""
   private var _alignment: Alignment = Neutral
@@ -14,12 +14,26 @@ class Adventurer  {
   private val _attackDamage = 1
   private val _naturalTwenty = 20
   
+  private val _strength: Abilities = Strength
+  private val _constitution: Abilities = Constitution
+  private val _dexterity: Abilities = Dexterity
+  private val _intelligence: Abilities = Intelligence
+  private val _wisdom: Abilities = Wisdom
+  private val _charisma: Abilities = Charisma
+  
   //Getters
   def name = _name
   def alignment = _alignment
   def hitPoints = _hitPoints
   def armorClass = _armorClass
+  def strength = _strength
+  def constitution = _constitution
+  def dexterity = _dexterity
+  def intelligence = _intelligence
+  def wisdom = _wisdom
+  def charisma = _charisma
   
+
   //Setters
   def name_= (n: String) = _name = n
   def alignment_= (a: Alignment) = _alignment = a
@@ -44,6 +58,12 @@ class Adventurer  {
   }
   
   def isDead: Boolean = {
-    if (this.hitPoints > 0) true else false
+    if (this.hitPoints > 0) false else true
   }
+  
+  def applyModifier(a: Abilities, i: Int) = {
+    a.modifyBy(i)
+  }
+  
+  
 }
