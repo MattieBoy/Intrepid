@@ -30,7 +30,6 @@ class AbilitiesSpec extends FlatSpec with Matchers {
   "Abilities" should "be able to be modified" in  {
     Strength.value = 10
     Strength.modifyBy(3)
-      
     13 shouldBe Strength.value
   }
 }
