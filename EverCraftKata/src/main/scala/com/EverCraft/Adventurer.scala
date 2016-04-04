@@ -11,6 +11,7 @@ class Adventurer{
   private var _alignment: Alignment = Neutral
   private var _hitPoints = 5
   private var _armorClass = 10
+  private var _attackRoll = 0
   private val _attackDamage = 1
   private val _naturalTwenty = 20
   
@@ -24,6 +25,7 @@ class Adventurer{
   //Getters
   def name = _name
   def alignment = _alignment
+  def attackRoll = _attackRoll
   def hitPoints = _hitPoints
   def armorClass = _armorClass
   def strength = _strength
@@ -46,29 +48,44 @@ class Adventurer{
     abilities.map(c)
   }
   
+  def modifyAttributes = {
+    applyConstitutionModifier
+    applyDexterityModifier
+  }
+  
+  def applyConstitutionModifier = {
+    _hitPoints += _constitution.abilitiesModifiers.getOrElse(_constitution.value, 0)
+  }
+  
+  def applyDexterityModifier = {
+    _armorClass += _dexterity.abilitiesModifiers.getOrElse(_dexterity.value, 0)
+  }
+  
   def randomizedModify(a: Abilities) = {
     a.modifyBy(a.rando(-9 to 10))
   }
   
   def attack(opponent: Adventurer) = {
-    val attackRoll = strike
-    calculateHit(attackRoll, opponent)
+    strike
+    calculateHit(_attackRoll, opponent)
   }
-  
-  def strike: Int = {
+
+  def strike = {
     val rnd = new Random()
     val range = 1 to 20
-    range(rnd.nextInt(range length))
+    _attackRoll = (rnd.nextInt(range length))
   }
+
+  def modifyAttackRoll = _attackRoll += _strength.abilitiesModifiers.getOrElse(_strength.value, 0)
   
   def calculateHit(s: Int, o: Adventurer) = {
     def didHit: Boolean = s >= o.armorClass
     def wasCritical: Boolean = s == _naturalTwenty
-    if (wasCritical) o.hitPoints -= _attackDamage*2 else if (didHit) o.hitPoints -= _attackDamage
+    if (wasCritical) o._hitPoints -= _attackDamage*2 else if (didHit) o._hitPoints -= _attackDamage  //DJ
   }
   
   def isDead: Boolean = {
-    if (this.hitPoints > 0) false else true
+    this._hitPoints <= 0
   }
   
   def applyModifier(a: Abilities, i: Int) = {

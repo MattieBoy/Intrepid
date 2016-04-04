@@ -37,10 +37,10 @@ class AdventurerSpec extends FlatSpec with Matchers {
   
   "Adventurer" should "be able to strike another adventurer by rolling a value between 1 - 20" in {
     val subject = new Adventurer
-    val attackStrike = subject.strike
-    
-    attackStrike should be <= 20
-    attackStrike should be >= 1
+    subject.strike
+
+    subject.attackRoll should be <= 20
+    subject.attackRoll should be >= 1
   }
   
   "Opponent" should "be hit if Adventurers attackRoll is >= to opponent armor class" in {
@@ -75,55 +75,35 @@ class AdventurerSpec extends FlatSpec with Matchers {
     val subject = new Adventurer
     val opponent = new Adventurer
     opponent.armorClass = 1
+    opponent.hitPoints = 5
     subject.attack(opponent)
     
     4 should === (opponent.hitPoints)
   }
   
+  //override random roll calculator to direct
+  
   "Adventurer" should "be able to kill opponent when their hit points are reduced to zero" in {
     val subject = new Adventurer
-    val opponent = new Adventurer
-    opponent.hitPoints = 1
-    opponent.armorClass = 1
-    subject.attack(opponent)
-    
-    true should === (opponent.isDead)
+    subject.hitPoints = 0
+
+    true should === (subject.isDead)
   }
   
   "Adventurer" should "not be allowed to have an ability score greater than 20" in {
     Strength.value = 10
     val subject = new Adventurer
     subject.strength.modifyBy(20)
-//    subject.constitution.modifyBy(20)
-//    subject.dexterity.modifyBy(20)
-//    subject.intelligence.modifyBy(20)
-//    subject.wisdom.modifyBy(20)
-//    subject.charisma.modifyBy(20)
-    
+
     20 should === (subject.strength.value)
-//    20 should === (subject.constitution.value)
-//    20 should === (subject.dexterity.value)
-//    20 should === (subject.intelligence.value)
-//    20 should === (subject.wisdom.value)
-//    20 should === (subject.charisma.value)
   }
 
   "Adventurer" should "not be allowed to have an ability score less than 1" in {
     Strength.value = 10
     val subject = new Adventurer
     subject.strength.modifyBy(-20)
-//    subject.constitution.modifyBy(-20)
-//    subject.dexterity.modifyBy(-20)
-//    subject.intelligence.modifyBy(-20)
-//    subject.wisdom.modifyBy(-20)
-//    subject.charisma.modifyBy(-20)
-
+    
     1 should ===(subject.strength.value)
-//    1 should ===(subject.constitution.value)
-//    1 should ===(subject.dexterity.value)
-//    1 should ===(subject.intelligence.value)
-//    1 should ===(subject.wisdom.value)
-//    1 should ===(subject.charisma.value)
   }
   
   "Adventurer" should "be able to have ability modified with a random value for uniqueness" in {
@@ -131,7 +111,43 @@ class AdventurerSpec extends FlatSpec with Matchers {
     val subject = new Adventurer
     
     subject.randomizedModify(Strength)
-    20 should be >= Strength.value
+    20 should be >= Strength.value 
     1 should be <= Strength.value
+  }
+  
+  "Adventurer" should "have initial ability scores randomly modified for uniqueness" in {
+    val subject = new Adventurer
+    subject.setModifiedAbilities(subject.adventurerAbilities)
+    
+    println("Strength is = " + Strength.value)
+    println("Dexterity is = " + Dexterity.value)
+  }
+
+  "Adventurer" should "have hit points modified by Constitution score" in {
+    Constitution.value = 10
+    val subject = new Adventurer
+    subject.hitPoints = 5
+    subject.constitution.modifyBy(2)
+    subject.applyConstitutionModifier
+    
+    6 shouldBe subject.hitPoints
+  }
+
+  "Adventurer" should "have armor class modified by Dexterity Score" in {
+    Dexterity.value = 10
+    val subject = new Adventurer
+    subject.armorClass = 10
+    subject.dexterity.modifyBy(2)
+    subject.applyDexterityModifier
+    
+    11 shouldBe subject.armorClass
+  }
+
+  "Adventurer" should "have attack roll modified by Strength" in {
+    Strength.value = 12
+    val subject = new Adventurer
+    subject.modifyAttackRoll
+    
+    1 shouldBe subject.attackRoll
   }
 }

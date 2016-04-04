@@ -1,6 +1,5 @@
 package com.EverCraft
 
-import com.EverCraft
 import org.scalatest._
 /**
  * Created by matthewrighter on 3/25/16.
