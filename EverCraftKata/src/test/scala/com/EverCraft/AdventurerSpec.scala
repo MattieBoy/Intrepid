@@ -62,7 +62,6 @@ class AdventurerSpec extends FlatSpec with Matchers {
     true shouldBe hit
   }
   
-  //Not sure this test is meaningful. need to figure out how to control the roll rather than set opponent AC?
   "Adventurer" should "be able to attack and damage an opponent" in {
     val subject = new Adventurer
     val opponent = new Adventurer
@@ -72,8 +71,7 @@ class AdventurerSpec extends FlatSpec with Matchers {
     4 should === (opponent.hitPoints)
   }
   
-  //override random roll calculator to direct
-  
+
   "Adventurer" should "be able to kill opponent when their hit points are reduced to zero" in {
     val subject = new Adventurer
     subject.hitPoints = 0
@@ -109,9 +107,6 @@ class AdventurerSpec extends FlatSpec with Matchers {
   "Adventurer" should "have initial ability scores randomly modified for uniqueness" in {
     val subject = new Adventurer
     subject.setModifiedAbilities(subject.adventurerAbilities)
-    
-    println("Strength is = " + Strength.value)
-    println("Dexterity is = " + Dexterity.value)
   }
 
   "Adventurer" should "have hit points modified by Constitution score" in {
@@ -166,6 +161,5 @@ class AdventurerSpec extends FlatSpec with Matchers {
     
     4 shouldBe opponent.hitPoints
   }
-  
-  
+
 }

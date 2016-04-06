@@ -1,7 +1,5 @@
 package com.EverCraft
 
-import scala.util.Random
-
 /**
  * Created by matthewrighter on 3/25/16.
  */
@@ -11,7 +9,6 @@ class Adventurer{
   private var _alignment: Alignment = Neutral
   private var _hitPoints = 5
   private var _armorClass = 10
-  private var _attackRoll = 0
   private var _attackDamage = 1
   private val _naturalTwenty = 20
   
@@ -21,16 +18,20 @@ class Adventurer{
   private val _intelligence: Abilities = Intelligence
   private val _wisdom: Abilities = Wisdom
   private val _charisma: Abilities = Charisma
+  
+  private val _experiencePoints: Attributes = ExperiencePoints
+  private val _level: Attributes = Level
 
   private val _strengthModifier = strength.abilitiesModifiers.getOrElse(_strength.value, 0)
 
   //Getters
   def name = _name
   def alignment = _alignment
-  def attackRoll = _attackRoll
   def attackDamage = _attackDamage
   def hitPoints = _hitPoints
   def armorClass = _armorClass
+  def experiencePoints = _experiencePoints
+  def level = _level
   def strength = _strength
   def strengthModifier = _strengthModifier
   def constitution = _constitution
@@ -72,12 +73,6 @@ class Adventurer{
   def attack(s: Int, opponent: Adventurer) = {
     calculateHit(s, opponent)
   }
-
-//  def strike: Int = {
-//    val rnd = new Random()
-//    val range = 1 to 20
-//    rnd.nextInt(range length)
-//  }
   
   def calculateHit(s: Int, o: Adventurer) = {
     if (wasCritical(s)) o._hitPoints -= (_attackDamage + _strengthModifier * 2) * 2 else if (didHit(s, o)) o._hitPoints -= _attackDamage
