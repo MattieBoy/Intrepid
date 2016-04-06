@@ -12,7 +12,7 @@ class Adventurer{
   private var _hitPoints = 5
   private var _armorClass = 10
   private var _attackRoll = 0
-  private val _attackDamage = 1
+  private var _attackDamage = 1
   private val _naturalTwenty = 20
   
   private val _strength: Abilities = Strength
@@ -21,14 +21,18 @@ class Adventurer{
   private val _intelligence: Abilities = Intelligence
   private val _wisdom: Abilities = Wisdom
   private val _charisma: Abilities = Charisma
-  
+
+  private val _strengthModifier = strength.abilitiesModifiers.getOrElse(_strength.value, 0)
+
   //Getters
   def name = _name
   def alignment = _alignment
   def attackRoll = _attackRoll
+  def attackDamage = _attackDamage
   def hitPoints = _hitPoints
   def armorClass = _armorClass
   def strength = _strength
+  def strengthModifier = _strengthModifier
   def constitution = _constitution
   def dexterity = _dexterity
   def intelligence = _intelligence
@@ -65,23 +69,35 @@ class Adventurer{
     a.modifyBy(a.rando(-9 to 10))
   }
   
-  def attack(opponent: Adventurer) = {
-    strike
-    calculateHit(_attackRoll, opponent)
+  def attack(s: Int, opponent: Adventurer) = {
+    calculateHit(s, opponent)
   }
 
-  def strike = {
-    val rnd = new Random()
-    val range = 1 to 20
-    _attackRoll = (rnd.nextInt(range length))
-  }
-
-  def modifyAttackRoll = _attackRoll += _strength.abilitiesModifiers.getOrElse(_strength.value, 0)
+//  def strike: Int = {
+//    val rnd = new Random()
+//    val range = 1 to 20
+//    rnd.nextInt(range length)
+//  }
   
   def calculateHit(s: Int, o: Adventurer) = {
-    def didHit: Boolean = s >= o.armorClass
-    def wasCritical: Boolean = s == _naturalTwenty
-    if (wasCritical) o._hitPoints -= _attackDamage*2 else if (didHit) o._hitPoints -= _attackDamage  //DJ
+    if (wasCritical(s)) o._hitPoints -= (_attackDamage + _strengthModifier * 2) * 2 else if (didHit(s, o)) o._hitPoints -= _attackDamage
+  }
+  
+  def didHit(s: Int, o: Adventurer): Boolean = {
+    modifyAttackRoll(s) >= o.armorClass
+  }
+  
+  def wasCritical(s: Int): Boolean = {
+    s == _naturalTwenty
+  }
+  
+  def modifyAttackRoll(ar: Int): Int = {
+    ar + _strengthModifier
+  }
+  
+  def modifyAttackDamage: Int = {
+    _attackDamage += _strengthModifier
+    attackDamage
   }
   
   def isDead: Boolean = {

@@ -3,6 +3,8 @@ package com.EverCraft
 import org.scalatest._
 
 class AdventurerSpec extends FlatSpec with Matchers {
+
+  
   "Adventurer" should "be able to be given a name" in {
     val subject = new Adventurer
     subject.name = "Colonel Rhombus"
@@ -35,48 +37,37 @@ class AdventurerSpec extends FlatSpec with Matchers {
     10 should === (subject.armorClass)
   }
   
-  "Adventurer" should "be able to strike another adventurer by rolling a value between 1 - 20" in {
-    val subject = new Adventurer
-    subject.strike
-
-    subject.attackRoll should be <= 20
-    subject.attackRoll should be >= 1
-  }
-  
   "Opponent" should "be hit if Adventurers attackRoll is >= to opponent armor class" in {
     val subject = new Adventurer
     val opponent = new Adventurer
-    val attackRoll = 13
-    subject.calculateHit(attackRoll, opponent)
+    opponent.armorClass = 2
+    val hit = subject.didHit(13, opponent)
     
-    4 should === (opponent.hitPoints)
+    true shouldBe hit
   }
 
   "Opponent" should "not be hit if Adventurers attackRoll is <= to opponent armor class" in {
     val subject = new Adventurer
     val opponent = new Adventurer
-    val attackRoll = 5
-    subject.calculateHit(attackRoll, opponent)
+    val hit = subject.didHit(2, opponent)
 
-    5 should === (opponent.hitPoints)
+    false shouldBe hit
   }
 
   "Opponent" should "be hit if Adventurers attackRoll is == to opponent armor class" in {
     val subject = new Adventurer
     val opponent = new Adventurer
-    val attackRoll = 10
-    subject.calculateHit(attackRoll, opponent)
+    val hit = subject.didHit(10, opponent)
 
-    4 should === (opponent.hitPoints)
+    true shouldBe hit
   }
   
   //Not sure this test is meaningful. need to figure out how to control the roll rather than set opponent AC?
   "Adventurer" should "be able to attack and damage an opponent" in {
     val subject = new Adventurer
     val opponent = new Adventurer
-    opponent.armorClass = 1
     opponent.hitPoints = 5
-    subject.attack(opponent)
+    subject.attack(19, opponent)
     
     4 should === (opponent.hitPoints)
   }
@@ -146,8 +137,35 @@ class AdventurerSpec extends FlatSpec with Matchers {
   "Adventurer" should "have attack roll modified by Strength" in {
     Strength.value = 12
     val subject = new Adventurer
-    subject.modifyAttackRoll
-    
-    1 shouldBe subject.attackRoll
+    val modifiedRoll = subject.modifyAttackRoll(1)
+    2 shouldBe modifiedRoll
   }
+
+  "Adventurer" should "have attack damage modified by Strength" in {
+    Strength.value = 12
+    val subject = new Adventurer
+    val modifiedDamage = subject.modifyAttackDamage
+
+    2 shouldBe modifiedDamage
+  }
+
+  "Adventurer" should "score critical hit on natural 20" in {
+    Strength.value = 12
+    val subject = new Adventurer
+    val crit = subject.wasCritical(20)
+    
+    true shouldBe crit
+  }
+
+  "Adventurer" should "deal double damage on critical hit" in {
+    Strength.value = 12
+    val subject = new Adventurer
+    val opponent = new Adventurer
+    opponent.hitPoints = 10
+    subject.calculateHit(20, opponent)
+    
+    4 shouldBe opponent.hitPoints
+  }
+  
+  
 }
